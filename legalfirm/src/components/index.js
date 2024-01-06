@@ -7,6 +7,7 @@ import Footer from './Footer';
 import About from './About';
 // Export your components
 export {
+    About,
     Navbar,
     Hero,
     Services,
