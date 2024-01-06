@@ -21,12 +21,13 @@ const Navbar = () => {
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((link)=>(
             <li key={link.id}
-            className={`${active === link.title ? "text-white"
-          : "text-[#040404]"} hover:text-[#6e2ca3] text-[18px] font-medium cursor-pointer`}
+            className={`${active === link.title ? "text-violet-600"
+          : "text-[#040404]"} hover:text-violet-600 text-[18px] font-medium cursor-pointer`}
           onClick={() => setActive(link.title)}>
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <li className='text-[18px] font-medium cursor-pointer'><button className=" list-none text-violet-600 text-center text-[18px] shadow-lg border-violet-600 border bg-white self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5">Contact Us</button></li>
         </ul>
         </div>
     </nav>

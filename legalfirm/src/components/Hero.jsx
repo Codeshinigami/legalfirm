@@ -1,5 +1,5 @@
 import React from 'react';
-import {styles} from '../styles'
+
 const Hero = () => {
   return (
     <section className='relative w-full h-screen mx-auto m-0'>
