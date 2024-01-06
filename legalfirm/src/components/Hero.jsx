@@ -2,7 +2,7 @@ import React from 'react';
 import {styles} from '../styles'
 const Hero = () => {
   return (
-    <section className='relative w-full h-full mx-auto'>
+    <section className='relative w-full h-screen mx-auto m-0'>
       <div className=" flex-col flex h-full w-full justify-center items-center max-md:max-w-full max-md:px-5">
         <div className="content relative flex w-[942px] max-w-full flex-col items-stretch mt-36 mb-16 max-md:my-10 object-cover">
           <h1 className="text-white text-center text-5xl font-bold leading-9 max-md:max-w-full max-md:text-4xl">FEEL THE WEIGHT OF OUR EXPERIENCE!</h1>
