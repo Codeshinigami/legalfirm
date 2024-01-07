@@ -7,8 +7,8 @@ const coreRoutes = [
         path: '/',
         title: 'Legal Firm',
         component: Landing,
-    }
+    },
 ];
 
-const routes = [...coreRoutes];
-export default routes;
+const landingroutes = [...coreRoutes];
+export default landingroutes;
