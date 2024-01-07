@@ -1,22 +1,18 @@
-import { useState } from 'react'
-import {BrowserRouter} from 'react-router-dom'
-import {About,Navbar, Footer, Hero, Team, Services} from './components'
+import { Route, Routes } from "react-router-dom"
+import routes from "./routes"
+import LayoutLanding from "./layout/landing/defaultlayout";
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-      <div className="bg-hero-pattern w-full bg-cover bg-no-repeat bg-center">
-      <Navbar/>
-      <Hero/>
-      </div>
-      <About />
-      <Services />
-      <Team />
-      <Footer />
-    </div>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<LayoutLanding/>}>
+        {routes.map((route,index) =>{
+          const {path, component : Component} = route;
+          return <Route key={index} path={path} element={<Component/>}/>
+        })}
+      </Route>
+    </Routes>
   )
 }
 
