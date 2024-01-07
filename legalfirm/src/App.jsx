@@ -14,18 +14,18 @@ function App() {
     <Routes>
 
       {/* routes for landing page will be rendered in defaultlayout of landing page */}
-      <Route element={<LayoutLanding />}>
+      <Route element={<Suspense fallback={<AppLoader />}><LayoutLanding /></Suspense>}>
         {landingroutes.map((route, index) => {
           const { path, component: Component } = route;
-          return <Route key={index} path={path} element={<Suspense fallback={<AppLoader/>}><Component /></Suspense>} />
+          return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
         })}
       </Route>
 
       {/* routes for dashboard page will be rendered in defaultlayout  */}
-      <Route element={<LayoutDashboard />}>
+      <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
         {Dashboardroutes.map((route, index) => {
           const { path, component: Component } = route;
-          return <Route key={index} path={path} element={<Suspense fallback={<AppLoader/>}><Component /></Suspense>} />
+          return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
         })}
       </Route>
     </Routes>

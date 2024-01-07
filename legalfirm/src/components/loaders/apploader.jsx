@@ -2,6 +2,8 @@ import styles from "./loaders.module.css"
 
 export default function AppLoader(){
     return(
-        <span class={styles.apploader}></span>
+        <div className={styles.wrapAppLoader}>
+            <span className={styles.apploader}></span>
+        </div>
     )
 }
