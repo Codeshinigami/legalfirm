@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[#ffffff]`}>
       <div className=" w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/"
-          className="flex items-center gap-5"
+          className="flex items-center gap-2"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ const Navbar = () => {
           <p className='text-black text-[18px] font-bold cursor-pointer flex'>LegalFirm
           </p>
         </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden items-center sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li key={link.id}
               className={`${active === link.title ? "text-violet-600"
