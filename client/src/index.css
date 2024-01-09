@@ -12,3 +12,8 @@
   scroll-behavior: smooth;
   color-scheme: light;
 }
+
+
+.no-scrollbar::-webkit-scrollbar{
+  width: 0 !important;
+}
