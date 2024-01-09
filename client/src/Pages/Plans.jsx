@@ -30,7 +30,7 @@ export default function Plans() {
             {Pricing_categories.map((pricing, i) => {
                 const { name, desc, popular, price, facilities } = pricing;
                 return (
-                    <div key={i} className={"h-[500px] w-[32%] p-8 rounded-2xl border-[1px] border-gray-300 " + (popular ? "border-blue-600 border-[2px] h-[530px] w-[35%]" : "")}>
+                    <div key={i} className={"h-[500px] w-[32%] p-8 rounded-2xl border-[1px] border-gray-300 " + (popular ? "!border-blue-600 border-[2px] h-[530px] w-[35%]" : "")}>
                         <div className="flex items-center justify-between">
                             <h2 className="font-semibold text-xl">{name}</h2>
                             {popular && <p className="text-xs font-semibold bg-[#EDECFC] text-indigo-600 p-[7px] rounded-full">Most Popular</p>}
