@@ -1,4 +1,5 @@
-import React from 'react';
+// Remove the unused import statement for 'React'
+// import React from 'react';
 
 const Team = () => {
     return (
