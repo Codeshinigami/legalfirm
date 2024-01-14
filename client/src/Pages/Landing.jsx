@@ -4,8 +4,8 @@ export default function Landing() {
 
   return (
     
-    <div className="relative z-0 bg-primary">
-      <div className="bg-hero-pattern w-full bg-cover bg-no-repeat bg-center b">
+    <div className="relative z-0">
+      <div className="bg-hero-pattern w-full bg-cover bg-no-repeat bg-center  b">
         <Hero />
       </div>
       <About />
