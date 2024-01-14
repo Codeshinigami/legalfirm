@@ -3,7 +3,7 @@ import { swoc } from '../../assets';
 
 const Footer = () => {
     return (
-        <div class="flex items-end w-full min-h-screen bg-white">
+        <div class="flex items-end w-full bg-white">
             <footer class="w-full text-gray-700 bg-gray-100 body-font">
                 <div
                     class="container flex flex-col flex-wrap px-20 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
