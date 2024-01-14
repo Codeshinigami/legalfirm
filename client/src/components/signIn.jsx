@@ -3,18 +3,19 @@ import { useState } from "react"
 export default function SignIn({setLogin}) {
 
     const [signup, setSignup] = useState(false);
+    const body = document.querySelector("body");
 
     return (
         <>
             <section className="bg-gray-50">
-                <div  className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 absolute top-0 left-0 backdrop-blur-sm z-50 bg-opacity-50 bg-black h-[100%] w-[100%]">
-                    <div className="bg-transparent w-[100vw] h-[100vh] absolute z-0" onClick={() => setLogin(false)}></div>
+                <div  className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 absolute top-0 left-0 z-50 bg-opacity-60 bg-black h-[100%] w-[100%]">
+                    <div className="bg-transparent backdrop-blur-sm w-[100vw] h-[100vh] absolute" onClick={() => {setLogin(false); body.style.overflow = ""}}></div>
                     <div className="w-full bg-white rounded-2xl shadow dark:border md:mt-0 sm:max-w-md xl:p-0 z-30">
                         <div className="p-8 space-y-4 md:space-y-6 sm:p-8">
                             <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900">
                                 Sign {signup ? "up" : "in"}
                             </h1>
-                            <form className="space-y-4 md:space-y-6" action="#">
+                            <form className="space-y-4 md:space-y-6">
                                 {signup && <div>
                                     <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 ">Your Name</label>
                                     <input type="text" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="Rahul" required="" />

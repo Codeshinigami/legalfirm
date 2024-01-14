@@ -9,6 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [login, setLogin] = useState(false);
   const [scrolled , setScrolled] = useState(false);
+  const body = document.querySelector("body");
 
   const handleScroll = () =>{
     scrollY > 0 ?
@@ -20,7 +21,7 @@ const Navbar = () => {
   window.addEventListener("scroll" , handleScroll);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition ease-in-out delay-100 ${scrolled && "bg-white-100 backdrop-blur-lg"}`}>
+    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition ease-in-out delay-100 ${scrolled && "bg-[#ffffffc4] backdrop-blur-lg"}`}>
       {login && <SignIn setLogin={setLogin}/>}
       <div className={`w-full flex justify-between items-center max-w-7xl mx-auto `}>
         <Link to="/"
@@ -42,7 +43,7 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
-          <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-blue-500 border-blue-500"}`} onClick={() => setLogin(!login)}>Login</button></li>
+          <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-blue-500 border-blue-500"}`} onClick={() => {setLogin(!login); body.style.overflow = "hidden"}}>Login</button></li>
           <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-blue-500 border-blue-500"}`}>Contact Us</button></li>
         </ul>
       </div>
