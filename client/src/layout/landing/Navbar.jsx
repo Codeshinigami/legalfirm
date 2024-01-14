@@ -36,14 +36,14 @@ const Navbar = () => {
         <ul className='list-none hidden items-center sm:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li key={link.id}
-              className={`${active === link.title ? "!text-blue-500"
-                : "text-white"} hover:text-blue-500 text-[18px] font-medium cursor-pointer transition ease-in-out delay-100 ${scrolled && "!text-black"}`}
+              className={`${active === link.title ? "!text-violet-600"
+                : "text-white"} hover:text-violet-500 text-[18px] font-medium cursor-pointer transition ease-in-out delay-100 ${scrolled && "!text-black"}`}
               onClick={() => setActive(link.title)}>
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
-          <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-blue-500 border-blue-500"}`} onClick={() => setLogin(!login)}>Login</button></li>
-          <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-blue-500 border-blue-500"}`}>Contact Us</button></li>
+          <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-violet-600 border-violet-600"}`} onClick={() => setLogin(!login)}>Login</button></li>
+          <li className='text-[18px] font-medium cursor-pointer'><button className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-violet-600 border-violet-600"}`}>Contact Us</button></li>
         </ul>
       </div>
     </nav>
