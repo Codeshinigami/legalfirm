@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 const Hero = () => {
 
   return (
-    <section className='relative w-full h-screen mx-auto m-0'>
+    <section className='relative w-full h-screen mx-auto m-0 prevent-select'>
       <div className="bg-[#060c2a80] flex-col flex h-full w-full justify-center items-center max-md:max-w-full max-md:px-5">
         <div className="content relative flex w-[942px] max-w-full flex-col items-stretch mt-36 mb-16 max-md:my-10 object-cover">
           <div className="text-white border-[#9ca3af72] rounded-full px-10 ml-auto mr-auto py-1 w-max border-[1px] mb-7 cursor-pointer hover:border-[#9ca3afd1]">

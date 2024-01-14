@@ -21,7 +21,7 @@ const Navbar = () => {
   window.addEventListener("scroll" , handleScroll);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition ease-in-out delay-100 ${scrolled && "bg-[#ffffffc4] backdrop-blur-lg"}`}>
+    <nav className={`${styles.paddingX} prevent-select w-full flex items-center py-5 fixed top-0 z-20 transition ease-in-out delay-100 ${scrolled && "bg-[#ffffffc4] backdrop-blur-lg"}`}>
       {login && <SignIn setLogin={setLogin}/>}
       <div className={`w-full flex justify-between items-center max-w-7xl mx-auto `}>
         <Link to="/"
