@@ -36,6 +36,15 @@ const waitForRunCompletion = async (threadId, runId) => {
 // main function for chat completion
 const chatCompletion = async (req, res) => {
     try {
+        const {message} = req.body;
+
+        console.log("received message...")
+
+        if(!message){
+            res.json({error : "message is required."})
+            return;
+        }
+
         // Create a Thread
         const threadId = await createThread();
 
@@ -44,11 +53,15 @@ const chatCompletion = async (req, res) => {
             return;
         }
 
+        console.log("created thread ...")
+
         // Add a Message to the Thread
         await openai.beta.threads.messages.create(threadId, {
             role: "user",
-            content: "when does ipc 302 comes in action?",
+            content: message,
         });
+
+        console.log("created message ...")
 
         // Run the Assistant
         const runId = await runAssistant(threadId);
@@ -57,25 +70,31 @@ const chatCompletion = async (req, res) => {
             res.json({ error: "Failed to run the assistant" });
             return;
         }
-
+        console.log("waiting for completion ...")
         // Wait for the Run to complete
         await waitForRunCompletion(threadId, runId);
 
+        console.log("completed almost ...")
+
         // Display the Assistant's Response
         const messagesResponse = await openai.beta.threads.messages.list(threadId);
+
+        //filtering the assistant response
         const assistantResponses = messagesResponse.data.filter(
             (msg) => msg.role === "assistant"
         );
-        const response = assistantResponses
+        
+        //getting only message from it
+        const aiMsg = assistantResponses
             .map((msg) =>
                 msg.content
                     .filter((contentItem) => contentItem.type === "text")
                     .map((textContent) => textContent.text.value)
                     .join("\n")
-            )
-            .join("\n");
+            ).join("\n");
 
-        res.json({ response });
+        console.log("sent to client ... ")
+        res.status(200).json({ aiMsg });
     } catch (error) {
         console.error(error);
         res.json({ error: "Internal server error" });
