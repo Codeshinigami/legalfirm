@@ -11,7 +11,13 @@ const userSchema = mongoose.Schema({
     },
     password:{
         type: String
-    }
+    },
+    chats : [
+        {
+            user : String,
+            ai : String
+        }
+    ]
 })
 
 const userModel = mongoose.model("LegalFirm" , userSchema , "Users");

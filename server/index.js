@@ -1,10 +1,14 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const connectDb = require("./config/db");
 const openaiRouter  = require("./routes/openai");
-const usersRouter = require("./routes/users")
+const usersRouter = require("./routes/users");
+const chatsRouter = require("./routes/chats")
 
 require("dotenv").config();
+
+connectDb();
 
 app.use(cors());
 app.use(express.urlencoded({extended : true}));
@@ -23,8 +27,9 @@ app.use((req, res, next) => {
 
 });
 
-app.use(openaiRouter);
+app.use("/aiApi",openaiRouter);
 app.use(usersRouter);
+app.use(chatsRouter);
 
 const PORT = process.env.PORT;
 
