@@ -3,16 +3,17 @@ import React from 'react'
 export default function Card(props) {
     return (
         <>
-            <div className="card">
-                <span style={{zIndex:1}} className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    {props.source}
-                </span>
-                <img style={{height:'200px'}} src={props.image ? props.image : "https://static.vecteezy.com/system/resources/thumbnails/004/216/831/original/3d-world-news-background-loop-free-video.jpg"} className="card-img-top" alt="Not Found" />
-                <div className="card-body">
-                    <h5 className="card-title">{props.title}</h5>
-                    <p className="card-text">{props.description}</p>
-                    <p className="card-text">by {props.author?props.author:"unknown"} {props.date?"on "+props.date:""}</p>
-                    <a href={'https://www.indiatvnews.com/'} target='_blank' className="btn btn-secondary mt-4" rel="noreferrer">Read More</a>
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
+                <img height={'200px'} class="rounded-t-lg" src={props.image} alt="" />
+                <div class="p-5">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{props.title}</h5>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.description}</p>
+                    <a href="https://www.indiatvnews.com/" target='_blank' class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex justify-between">
+                        Read more
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </>

@@ -22,11 +22,11 @@ export default function Dashboard() {
                 <h2 className='text-center mt-10 text-3xl'>Today's Legal News</h2>
                 <div className='grid grid-cols-3 gap-4 mt-8 mb-8'>
                     {newsdata.news.slice(1, newscount).map((e) => {
-                        return <Card image={e.image} source={e.source} title={e.title} description={e.description} author={e.author} />
+                        return <Card image={e.image} source={e.source} title={e.title} description={e.content.slice(1,100)+'...'} author={e.author} />
                     })}
                 </div>
                 <div className='w-full text-center mt-8 mb-8'>
-                    <button className='btn btn-primary' onClick={() => { setnewscount(newscount + 3) }}>{newscount<=12?"Load More":"You Are Done For The Day 😓"}</button>
+                    <button className='bg-blue-500 text-white py-2 px-4 rounded-md' onClick={() => { setnewscount(newscount + 3) }}>{newscount<=12?"Load More":"You Are Done For The Day 😓"}</button>
                 </div>
             </div>
 
