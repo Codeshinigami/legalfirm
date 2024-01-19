@@ -1,29 +1,28 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
-
+import { UserGroupIcon, BookOpenIcon, DocumentArrowDownIcon, NewspaperIcon, } from '@heroicons/react/24/outline'
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'LegalSage',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-    icon: CloudArrowUpIcon,
+      'LegalSage is our own Chatbot powered with OpenAI to answer your legal queries in simple language and laymen text',
+    icon: BookOpenIcon ,
   },
   {
-    name: 'SSL certificates',
+    name: 'Document Generation',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-    icon: LockClosedIcon,
+      'We also provide you the options to fill forms and generate them such as Criminal-Case Filing with District Court',
+    icon: DocumentArrowDownIcon,
   },
   {
-    name: 'Simple queues',
+    name: 'Get Legal Advice',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    icon: ArrowPathIcon,
+      'Our team of lawyers are available 24/7 to provide you Legal advice from the comfort of your home',
+    icon: UserGroupIcon,
   },
   {
-    name: 'Advanced security',
+    name: 'News Updates',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-    icon: FingerPrintIcon,
+      'Get daily news updates on the law changes, new bills as well as new judgements.',
+    icon: NewspaperIcon,
   },
 ]
 
@@ -32,13 +31,12 @@ export default function Services() {
     <div id="services" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className=" text-[27px] text-base font-semibold leading-7 text-violet-600">Deploy faster</h2>
+          <h2 className=" text-[27px] text-base font-semibold leading-7 text-violet-600">OUR SERVICES</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to deploy your app
+            What do we actually do?
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+           As a Legalfirm, we specialize in various types of services to serve the public and give Legal Empowerment
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -60,3 +58,5 @@ export default function Services() {
     </div>
   )
 }
+
+
