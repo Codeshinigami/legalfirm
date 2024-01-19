@@ -13,13 +13,13 @@ const generateJWT = async (name, email) => {
   return jwt_token;
 };
 
-//to decode jwt to provide email and name
+//to decode jwt and provide email and name
 const decodeJWT = async (req, res) => {
   try {
     const { jwt_token } = req.body;
 
-    const decoded =
-      jwt.verify(jwt_token, jwt_secret, { algorithms: ["HS256"] }) || null;
+    const decoded = jwt.verify(jwt_token, jwt_secret, { algorithms: ["HS256"] }) || null;
+    
     if (decoded) {
       const { name, email } = decoded;
       res.json({ name: name, email: email });
@@ -45,6 +45,8 @@ const createUser = async (req, res) => {
         return;
         }
 
+        
+
         const salt = await bcrypt.genSalt(11);
         const hashedpassword = await bcrypt.hash(password, salt).catch((err) => {
         console.error(err);
@@ -52,30 +54,29 @@ const createUser = async (req, res) => {
         });
 
         const userData = {
-        name: name,
-        email: email,
-        password: hashedpassword,
+          name: name,
+          email: email,
+          password: hashedpassword,
         };
 
         //saving userdata in database
         try {
-        const user = new userModel(userData);
-        await user.save();
+            const user = new userModel(userData);
+            await user.save();
+
+            //generate jwt token
+            const jwt_token = await generateJWT(name, email);
+
+            //setting cookie expiration to 1 day
+            const expirationDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
+
+            res.cookie("jwt", jwt_token, { expires: expirationDate , httpOnly : false });
+            res.status(201).json({ success: "user created successfully.", jwt_token: jwt_token });
+            
         } catch (err) {
-        console.error(err);
-        res.json({ error: "error occured while creating an user." });
+            res.json({ error: "Error occurred while creating a user." });
         }
 
-        //generate jwt token
-        const jwt_token = await generateJWT(name, email);
-
-        //setting cookie expiration to 1 day
-        const expirationDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
-
-        res.cookie("jwt", jwt_token, { expires: expirationDate });
-        res
-        .status(201)
-        .json({ success: "user created successfully.", jwt_token: jwt_token });
     } catch (err) {
         console.log(err);
         res.json({ error: "Internal server error" });
@@ -109,7 +110,7 @@ const loginUser = async (req, res) => {
           userInDatabase.email
         );
 
-        res.cookie("jwt", jwt_token, { expiresIn: "1d" });
+        res.cookie("jwt", jwt_token, { expiresIn: "1d", httpOnly: false });
         res.json({ success: "logged in succesfully" });
       } else {
         res.json({ error: "incorrect password." });
@@ -123,4 +124,4 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { createUser, loginUser };
+module.exports = { createUser, loginUser , decodeJWT};
