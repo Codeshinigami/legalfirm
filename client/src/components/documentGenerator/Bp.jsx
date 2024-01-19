@@ -1,35 +1,34 @@
 import React from 'react'
-import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-
-
 
 export default function Bp() {
-    //const {degrees,PDFDocument, rgb, StandardFonts } = PDFLib
+
+    const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib
 
     async function modifyPdf() {
-    let effective_date = document.querySelector("#effective-date").value;
-    let employeeName = document.querySelector("#employeeName").value;
-    let employeeAddress = document.querySelector("#employeeAddress").value;
-    let employerName = document.querySelector("#employerName").value;
-    let employerAddress = document.querySelector("#employerAddress").value;
-    let landDiscription1 = document.querySelector("#landDiscription1").value;
-    let landDiscription2 = document.querySelector("#landDiscription2").value;
-    let landDiscription3 = document.querySelector("#landDiscription3").value;
-    let leaseStartDate = document.querySelector("#leaseStartDate").value;
-    let leaseEndDate = document.querySelector("#leaseStartDate").value;
-    let totalMonths = document.querySelector("#totalMonths").value;
-    let monthlyAmount = document.querySelector("#monthlyAmount").value;
-    let landUse = document.querySelector("#landUse").value;
-    let proAct = document.querySelector("#proAct").value;
-    let minInsurance = document.querySelector("#minInsurance").value;
-    let daysNotice = document.querySelector("#daysNotice").value;
-    let securityDeposit = document.querySelector("#securityDeposit").value;
-    let defaultAmount = document.querySelector("#defaultAmount").value;
-
-
-    
+      // getting inputs
+    let cityName = document.querySelector("#city").value;
+    let department = document.querySelector("#department").value;
+    let state = document.querySelector("#state").value;
+    let tehsil = document.querySelector("#tehsil").value;
+    let district = document.querySelector("#district").value;
+    let name = document.querySelector("#name").value;
+    let sex = document.querySelector("#sex").value;
+    let dateOfBirth = document.querySelector("#dateOfBirth").value;
+    let placeOfBirth = document.querySelector("#placeOfBirth").value;
+    let nameOfMother = document.querySelector("#nameOfMother").value;
+    let uid_mother = document.querySelector("#uid-mother").value;
+    let nameOfFather = document.querySelector("#nameOfFather").value;
+    let uid_father = document.querySelector("#uid-father").value;
+    let birthAddress1 = document.querySelector("#birthAddress1").value;
+    let birthAddress2 = document.querySelector("#birthAddress2").value;
+    let birthAddress3 = document.querySelector("#birthAddress3").value;
+    let birthAddress4 = document.querySelector("#birthAddress4").value;
+    let perAddress1 = document.querySelector("#perAddress1").value;
+    let perAddress2 = document.querySelector("#perAddress2").value;
+    let perAddress3 = document.querySelector("#perAddress3").value;
+    let perAddress4 = document.querySelector("#perAddress4").value;
       // Fetch an existing PDF document
-      const url = './LandLease.pdf'
+      const url = 'birth-certificate.pdf'
   	  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
 
       // Load a PDFDocument from the existing PDF bytes
@@ -43,103 +42,136 @@ export default function Bp() {
       const firstPage = pages[0]
 
       // Get the width and height of the first page
-      //const { width, height } = firstPage.getSize()
+      const { width, height } = firstPage.getSize()
 
       // Draw a string of text diagonally across the first page
-    firstPage.drawText(effective_date,{x:80,y:672,size:10,font: helveticaFont,
-    color: rgb(0, 0, 0),})
-    firstPage.drawText(employeeName,{x:195,y:665,size:12,font: helveticaFont,
+    firstPage.drawText('India',{x:270,y:752,size:15,font: helveticaFont,
       color: rgb(0, 0, 0),})
-    firstPage.drawText(employeeAddress,{x:195,y:652,size:12,font: helveticaFont,
-    color: rgb(0, 0, 0),})
-    firstPage.drawText(employerName,{x:190,y:614,size:12,font: helveticaFont,
+    firstPage.drawText('India',{x:335,y:738,size:15,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(employerAddress,{x:382,y:614,size:12,font: helveticaFont,
+    firstPage.drawText(department,{x:154,y:725,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(landDiscription1,{x:90,y:475,size:13,font: helveticaFont,
+    firstPage.drawText("Birth Control",{x:315,y:725,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(landDiscription2,{x:90,y:462,size:13,font: helveticaFont,
+    firstPage.drawText("Birth Control",{x:243,y:697,size:10,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(landDiscription3,{x:90,y:448,size:13,font: helveticaFont,
+    firstPage.drawText(department,{x:315,y:697,size:10,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(leaseStartDate,{x:183,y:364,size:13,font: helveticaFont,
+    firstPage.drawText(state,{x:335,y:617,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(leaseEndDate,{x:324,y:364,size:13,font: helveticaFont,
+    firstPage.drawText("2006",{x:155,y:593,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(totalMonths,{x:90,y:351,size:13,font: helveticaFont,
+    firstPage.drawText(state,{x:155,y:555,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(monthlyAmount,{x:193,y:295,size:13,font: helveticaFont,
+    firstPage.drawText("2006",{x:430,y:555,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})  
+    firstPage.drawText(department+"  "+cityName,{x:138,y:505,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(tehsil,{x:155,y:492,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(district,{x:155,y:474,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(state,{x:340,y:474,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(department+"  "+cityName,{x:328,y:426,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(tehsil,{x:302,y:415,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(district,{x:150,y:415,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(state,{x:150,y:403,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(name,{x:180,y:380,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(sex,{x:180,y:365,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(dateOfBirth,{x:220,y:350,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(placeOfBirth,{x:230,y:335,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(nameOfMother,{x:247,y:320,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(uid_mother,{x:329,y:300,size:12,font: helveticaFont,
+      color: rgb(0, 0, 0),})
+    firstPage.drawText(nameOfFather,{x:290,y:273,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(landUse,{x:270,y:226,size:13,font: helveticaFont,
+    firstPage.drawText(uid_father,{x:320,y:250,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText(proAct,{x:150,y:212,size:13,font: helveticaFont,
+    firstPage.drawText(birthAddress1,{x:150,y:210,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    firstPage.drawText('Maintaince',{x:165,y:142,size:13,font: helveticaFont,
+    firstPage.drawText(birthAddress2,{x:150,y:199,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-        const secondPage = pages[1];
-    secondPage.drawText(minInsurance,{x:395,y:757,size:13,font: helveticaFont,
+    firstPage.drawText(birthAddress3,{x:150,y:187,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(daysNotice,{x:78,y:662,size:13,font: helveticaFont,
+    firstPage.drawText(birthAddress4,{x:150,y:176,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(securityDeposit,{x:185,y:578,size:13,font: helveticaFont,
+    firstPage.drawText(perAddress1,{x:400,y:210,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(defaultAmount,{x:185,y:513,size:13,font: helveticaFont,
+    firstPage.drawText(perAddress2,{x:400,y:199,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(employeeName,{x:95,y:382,size:13,font: helveticaFont,
+    firstPage.drawText(perAddress3,{x:400,y:187,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(employerName,{x:325,y:382,size:13,font: helveticaFont,
+    firstPage.drawText(perAddress4,{x:400,y:176,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(employeeName,{x:95,y:344,size:13,font: helveticaFont,
+    firstPage.drawText(Math.floor(Math.random() * (10000 - 1000 + 1)).toString(),{x:255,y:160,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(employerName,{x:335,y:344,size:13,font: helveticaFont,
+    firstPage.drawText(new Date().toDateString(),{x:459,y:160,size:10,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(new Date().toDateString(),{x:95,y:300,size:13,font: helveticaFont,
+    firstPage.drawText('remarks',{x:240,y:147,size:10,font: helveticaFont,
         color: rgb(0, 0, 0),})
-    secondPage.drawText(new Date().toDateString(),{x:335,y:300,size:13,font: helveticaFont,
+    firstPage.drawText(new Date().toDateString(),{x:255,y:132,size:7,font: helveticaFont,
         color: rgb(0, 0, 0),})
       // Serialize the PDFDocument to bytes (a Uint8Array)
       const pdfBytes = await pdfDoc.save()
 		// Trigger the browser to download the PDF document
       download(pdfBytes, "pdf-lib_modification_example.pdf", "application/pdf");
     }
+
+
   return (
-<div class="w-full p-8 bg-white rounded-lg shadow-md flex-row">
+    <>
+  <meta charSet="utf-8" />
+  <p>
+    Click the button to modify an existing PDF document with{" "}
+    <code>pdf-lib</code>
+  </p>
+  <div className="form">
+    <h2>Local body details</h2>
+    <select id="department">
+      <option>Gram-panchyat</option>
+      <option>Municipal Council</option>
+    </select>
+    <input id="city" type="text" placeholder="city/village" />
+    <input id="state" type="text" placeholder="State" />
+    <input id="tehsil" type="text" placeholder="tehsil" />
+    <input id="district" type="text" placeholder="district" />
+    <h2>Personal Details</h2>
+    <input id="name" type="text" placeholder="name" />
+    <select id="sex">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <input id="dateOfBirth" type="date" placeholder="Date Of Birth" />
+    <input id="placeOfBirth" type="text" placeholder="place Of Birth" />
+    <input id="nameOfMother" type="text" placeholder="Name of Mother" />
+    <input id="uid-mother" type="text" placeholder="UID no. of mother" />
+    <input id="nameOfFather" type="text" placeholder="Name of Father" />
+    <input id="uid-father" type="text" placeholder="UID no. of father" />
+    <h3>Address of the parents at the of birth</h3>
+    <input id="birthAddress1" type="text" placeholder="Address line 1" />
+    <input id="birthAddress2" type="text" placeholder="Address line 2" />
+    <input id="birthAddress3" type="text" placeholder="Address line 3" />
+    <input id="birthAddress4" type="text" placeholder="Address line 4" />
+    <h3>permanent Address of parents</h3>
+    <input id="perAddress1" type="text" placeholder="Address line 1" />
+    <input id="perAddress2" type="text" placeholder="Address line 2" />
+    <input id="perAddress3" type="text" placeholder="Address line 3" />
+    <input id="perAddress4" type="text" placeholder="Address line 4" />
+  </div>
+  <button onClick={()=>{modifyPdf()}}>Modify PDF</button>
+  <p className="small">(Your browser will download the resulting file)</p>
+</>
 
-  <h2 class="text-2xl font-bold mb-6">Agreement details</h2>
-
-  <label class="block text-gray-700">Effective Date</label>
-  <input type="date" id="effective-date" class="form-input mb-4 focus:ring focus:ring-blue-300"/>
-
-  <h4 class="text-lg font-bold mb-2">Employee details</h4>
-  <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-
-  <h4 class="text-lg font-bold mb-2">Employer details</h4>
-  <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-
-  <h4 class="text-lg font-bold mb-2">Land description</h4>
-  <input id="landDiscription1" type="text" placeholder="Land description 1" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="landDiscription2" type="text" placeholder="Land description 2" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="landDiscription3" type="text" placeholder="Land description 3" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-
-  <h4 class="text-lg font-bold mb-2">Term details</h4>
-  <label class="block text-gray-700">Lease begins on</label>
-  <input id="leaseStartDate" type="date" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <label class="block text-gray-700">Lease ends on</label>
-  <input id="leaseEndDate" type="date" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="totalMonths" type="number" placeholder="Total Months" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-
-  <h4 class="text-lg font-bold mb-2">Rent details</h4>
-  <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="landUse" type="text" placeholder="Land can be used for" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="proAct" type="text" placeholder="Prohibited Activities" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="minInsurance" type="number" placeholder="Min Amount of insurance" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-  <button onClick={() => modifyPdf()}>Modify PDF</button>
-    <p class="small">(Your browser will download the resulting file)</p>
-</div>
   )
 }
