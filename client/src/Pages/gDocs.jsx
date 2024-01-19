@@ -1,6 +1,9 @@
+import MainGenerator from "../components/documentGenerator/MainGenerator";
 
 export default function GDocs(){
     return(
-        <div></div>
+        <div>
+            <MainGenerator/>
+        </div>
     )
 }
