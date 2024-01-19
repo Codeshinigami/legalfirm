@@ -1,8 +1,59 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Axios from "axios";
+import toast from "react-hot-toast";
+
+const api_url = import.meta.env.VITE_API_URL;
 
 export default function SignIn({ setLogin }) {
+
   const [signup, setSignup] = useState(false);
+  const [name , setName] = useState("");
+  const [email , setEmail] = useState("");
+  const [password , setPassword] = useState("");
+
   const body = document.querySelector("body");
+
+  const handleLogin = async() =>{
+      
+    if(!email || !password){
+      toast.error("Fill out all the fields.")
+    }
+
+    await Axios.post(api_url + "/login", {
+      email : email,
+      password : password
+    },{withCredentials : true }).then((res) =>{
+      console.log(res.data);
+      if(res.data.success){
+        toast.success("registered successfully.")
+      }else{
+        toast.error(res.data.error || "an error occured while logging in");
+      }
+    }).catch((err) => {console.log(err); toast.error("Internal Server error.")})
+
+  }
+
+  const handleSignup = async() =>{
+     if(!name || !email || !password){
+      toast.error("Fill out all the fields.")
+     }
+
+     await Axios.post(api_url + "/register" , {
+      name : name,
+      email : email,
+      password : password
+     },{withCredentials : true }).then((res) =>{
+      console.log(res.data);
+      if(res.data.success){
+        toast.success("logged in successfully.")
+      }else{
+        toast.error(res.data.error || "an error occured while registering");
+      }
+    }).catch((err) => {console.log(err); toast.error("Internal Server error.")})
+
+  }
+
+
 
   return (
     <>
@@ -20,7 +71,7 @@ export default function SignIn({ setLogin }) {
               <h1 className="text-xl text-center font-bold leading-tight tracking-tight text-gray-900">
                 Sign {signup ? "up" : "in"}
               </h1>
-              <form className="space-y-4 md:space-y-6">
+              <div className="space-y-4 md:space-y-6">
                 {signup && (
                   <div>
                     <label
@@ -33,6 +84,7 @@ export default function SignIn({ setLogin }) {
                       type="text"
                       name="name"
                       id="name"
+                      onChange={(e) => setName(e.target.value)}
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                       placeholder="Rahul"
                       required=""
@@ -50,6 +102,7 @@ export default function SignIn({ setLogin }) {
                     type="email"
                     name="email"
                     id="email"
+                    onChange={(e) => setEmail(e.target.value)}
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     placeholder="name@company.com"
                     required=""
@@ -66,6 +119,7 @@ export default function SignIn({ setLogin }) {
                     type="password"
                     name="password"
                     id="password"
+                    onChange={(e) => setPassword(e.target.value)}
                     placeholder="••••••••"
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     required=""
@@ -126,7 +180,7 @@ export default function SignIn({ setLogin }) {
                   </div>
                 )}
                 <button
-                  type="submit"
+                  onClick={signup ? handleSignup : handleLogin}
                   className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                 >
                   Sign {signup ? "up" : "in"}
@@ -146,7 +200,7 @@ export default function SignIn({ setLogin }) {
                     <span>Sign{signup ? "in" : "up"}</span>
                   </a>
                 </p>
-              </form>
+              </div>
             </div>
           </div>
         </div>

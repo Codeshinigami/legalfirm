@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 import landingroutes from "./routes/landing";
 import Dashboardroutes from "./routes/dashboard";
 import AppLoader from "./components/loaders/apploader";
+import LoginProvider from "./context/loginProvider";
 
 const LayoutLanding = lazy(() => import("./layout/landing/defaultlayout"))
 const LayoutDashboard = lazy(() => import("./layout/dashboard/defaultlayout"))
@@ -12,21 +13,22 @@ function App() {
 
   return (
     <Routes>
+      <Route element={<LoginProvider/>}>
+        {/* routes for landing page will be rendered in defaultlayout of landing page */}
+        <Route element={<Suspense fallback={<AppLoader />}><LayoutLanding /></Suspense>}>
+          {landingroutes.map((route, index) => {
+            const { path, component: Component } = route;
+            return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
+          })}
+        </Route>
 
-      {/* routes for landing page will be rendered in defaultlayout of landing page */}
-      <Route element={<Suspense fallback={<AppLoader />}><LayoutLanding /></Suspense>}>
-        {landingroutes.map((route, index) => {
-          const { path, component: Component } = route;
-          return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
-        })}
-      </Route>
-
-      {/* routes for dashboard page will be rendered in defaultlayout  */}
-      <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
-        {Dashboardroutes.map((route, index) => {
-          const { path, component: Component } = route;
-          return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
-        })}
+        {/* routes for dashboard page will be rendered in defaultlayout  */}
+        <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
+          {Dashboardroutes.map((route, index) => {
+            const { path, component: Component } = route;
+            return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
+          })}
+        </Route>
       </Route>
     </Routes>
   )
