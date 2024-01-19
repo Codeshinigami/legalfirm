@@ -1,4 +1,4 @@
-import { swoc } from "../../assets"
+import { legalfirmlogo } from "../../assets"
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 
@@ -63,8 +63,8 @@ export default function Sidebar() {
         <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
             <div className="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
                 <div className="flex items-center ml-4 h-14 border-b">
-                    <img className="w-8" src={swoc} alt="logo" />
-                    <h3 className="font-bold ml-2">LegalFirm</h3>
+                    <img className="w-8" src={legalfirmlogo} alt="logo" />
+                    <h3 className="font-bold ml-2">EthicalEdge</h3>
                 </div>
                 <div className="overflow-y-auto overflow-x-hidden flex-grow">
                     <ul className="flex flex-col py-4 space-y-1">
