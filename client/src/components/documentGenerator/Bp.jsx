@@ -4,7 +4,7 @@ import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 
 
 export default function Bp() {
-    const {degrees,PDFDocument, rgb, StandardFonts } = PDFLib
+    //const {degrees,PDFDocument, rgb, StandardFonts } = PDFLib
 
     async function modifyPdf() {
     let effective_date = document.querySelector("#effective-date").value;
