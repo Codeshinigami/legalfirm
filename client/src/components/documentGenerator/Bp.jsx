@@ -4,7 +4,7 @@ import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 
 
 export default function Bp() {
-    const {degrees,PDFDocument, rgb, StandardFonts } = PDFLib
+    //const {degrees,PDFDocument, rgb, StandardFonts } = PDFLib
 
     async function modifyPdf() {
     let effective_date = document.querySelector("#effective-date").value;
@@ -43,7 +43,7 @@ export default function Bp() {
       const firstPage = pages[0]
 
       // Get the width and height of the first page
-      const { width, height } = firstPage.getSize()
+      //const { width, height } = firstPage.getSize()
 
       // Draw a string of text diagonally across the first page
     firstPage.drawText(effective_date,{x:80,y:672,size:10,font: helveticaFont,
@@ -138,7 +138,7 @@ export default function Bp() {
   <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-  <button onClick={()=>{modifyPdf}}>Modify PDF</button>
+  <button onClick={() => modifyPdf()}>Modify PDF</button>
     <p class="small">(Your browser will download the resulting file)</p>
 </div>
   )
