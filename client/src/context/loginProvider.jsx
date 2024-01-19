@@ -10,7 +10,7 @@ export default function LoginProvider(){
 
     const jwt_token = Cookies.get("jwt");
     const [loggedIn , setloggedIn] = useState(false);
-    const [credentials , setCredentials] = useState({}); 
+    const [profile , setProfile] = useState({}); 
 
     useEffect(() =>{
 
@@ -23,7 +23,7 @@ export default function LoginProvider(){
                     Cookies.remove("jwt");
                 }else{
                     setloggedIn(true);
-                    setCredentials({name : res.data.name , email : res.data.email})
+                    setProfile({name : res.data.name , email : res.data.email})
                 }
             })
         }
@@ -33,7 +33,7 @@ export default function LoginProvider(){
     }, [jwt_token])
 
     return(
-        <LoginContext.Provider value={{loggedIn , credentials}}>
+        <LoginContext.Provider value={{loggedIn , profile}}>
             <Outlet/>
         </LoginContext.Provider>
     )
