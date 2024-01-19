@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { navLinks } from "../../constants/index.js";
 import { Link } from "react-router-dom";
 import { styles } from "../../styles.js";
-import { swoc } from "../../assets/index.js";
+import { legalfirmlogo } from "../../assets/index.js";
 import SignIn from "../../components/signIn.jsx";
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
           }}
         >
           <img
-            src={swoc}
+            src={legalfirmlogo}
             alt="logo"
             className="w-9 h-9 object-contain rounded-full"
           />
