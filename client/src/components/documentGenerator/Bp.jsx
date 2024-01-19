@@ -1,5 +1,5 @@
 import React from 'react'
-import { degrees, PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 
 
 
@@ -29,11 +29,12 @@ export default function Bp() {
 
     
       // Fetch an existing PDF document
-      const url = './LandLease.pdf'
-  	  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
-
-      // Load a PDFDocument from the existing PDF bytes
-      const pdfDoc = await PDFDocument.load(existingPdfBytes)
+      const existingPdfBytes = await fetch(
+        "https://raw.githubusercontent.com/RehanChalana/tech-hacks-work/main/LandLease.pdf"
+      ).then((res) => res.arrayBuffer());
+    console.log(existingPdfBytes)
+    //   var bytes = new Uint8Array(existingPdfBytes);
+    const pdfDoc = await PDFDocument.load(existingPdfBytes)
 
       // Embed the Helvetica font
       const helveticaFont = await pdfDoc.embedFont(StandardFonts.Helvetica)
@@ -41,12 +42,13 @@ export default function Bp() {
       // Get the first page of the document
       const pages = pdfDoc.getPages()
       const firstPage = pages[0]
+      const secondPage = pages[1]
 
       // Get the width and height of the first page
       //const { width, height } = firstPage.getSize()
 
       // Draw a string of text diagonally across the first page
-    firstPage.drawText(effective_date,{x:80,y:672,size:10,font: helveticaFont,
+    firstPage.drawText(effective_date,{x:80,y:692,size:10,font: helveticaFont,
     color: rgb(0, 0, 0),})
     firstPage.drawText(employeeName,{x:195,y:665,size:12,font: helveticaFont,
       color: rgb(0, 0, 0),})
@@ -76,7 +78,7 @@ export default function Bp() {
         color: rgb(0, 0, 0),})
     firstPage.drawText('Maintaince',{x:165,y:142,size:13,font: helveticaFont,
         color: rgb(0, 0, 0),})
-        const secondPage = pages[1];
+    // const secondPage = pages[1];
     secondPage.drawText(minInsurance,{x:395,y:757,size:13,font: helveticaFont,
         color: rgb(0, 0, 0),})
     secondPage.drawText(daysNotice,{x:78,y:662,size:13,font: helveticaFont,
@@ -97,7 +99,7 @@ export default function Bp() {
         color: rgb(0, 0, 0),})
     secondPage.drawText(new Date().toDateString(),{x:335,y:300,size:13,font: helveticaFont,
         color: rgb(0, 0, 0),})
-      // Serialize the PDFDocument to bytes (a Uint8Array)
+    //   Serialize the PDFDocument to bytes (a Uint8Array)
       const pdfBytes = await pdfDoc.save()
 		// Trigger the browser to download the PDF document
       download(pdfBytes, "pdf-lib_modification_example.pdf", "application/pdf");
