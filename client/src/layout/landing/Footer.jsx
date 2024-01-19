@@ -1,5 +1,5 @@
 import React from "react";
-import { swoc } from "../../assets";
+import { legalfirmfooter } from "../../assets";
 
 export default function Footer(){
   return (
@@ -23,7 +23,7 @@ export default function Footer(){
               title="Company"
               className="inline-flex items-center"
             >
-              <img src={swoc} alt="logo" className="w-9 h-9"/>
+              <img src={legalfirmfooter} alt="logo" className="w-9 h-9"/>
               <span className="ml-2 text-xl font-bold tracking-wide text-[#43f9e0] underline">
                 LegalFirm
               </span>
