@@ -33,7 +33,7 @@ export default function Dashboard() {
                         return <Card image={e.image} source={e.source} title={e.title} description={e.content.slice(1,100)+'...'} author={e.author} />
                     })}
                 </div>
-                <div className='w-full text-center mt-8 mb-8'>
+                <div className='w-full text-center mt-8 pb-8'>
                     <button className='bg-blue-500 text-white py-2 px-4 rounded-md' onClick={() => { setnewscount(newscount + 3) }}>{newscount<=12?"Load More":"You Are Done For The Day 😓"}</button>
                 </div>
             </div>
