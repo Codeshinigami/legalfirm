@@ -120,6 +120,7 @@ export default function Legalsage() {
 
     const handleEnterKey = (e) => {
         if (e.key === "Enter") {
+            console.log(chats);
             if(!sendDisabled){
                 requestAi();
             }

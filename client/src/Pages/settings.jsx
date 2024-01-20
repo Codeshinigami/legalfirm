@@ -4,28 +4,34 @@ import React, { useState } from 'react'
 export default function Settings() {
 
     const mode = useContext(LoginContext);
-    console.log(mode)
-    const saveMode = () =>{
+
+    const saveMode = () => {
         mode.setDarkmode(!mode.darkmode)
-        if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==="0"){
-            localStorage.setItem('theme',1)
+        if (localStorage.getItem('theme') === undefined || localStorage.getItem('theme') === "0") {
+            localStorage.setItem('theme', 1)
         }
-        else{
-            localStorage.setItem('theme',0)
+        else {
+            localStorage.setItem('theme', 0)
         }
     }
 
-    let tailwnd=""
-    if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
+    let tailwnd = ""
+    if (localStorage.getItem('theme') === undefined || localStorage.getItem('theme') == 0) {
         tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 '
     }
     return (
-        <div style={{height:'100vh',paddingTop:'50px'}} className={tailwnd}>
-            <label class=" relative inline-flex items-center cursor-pointer m-4">
-                <input type="checkbox" value="" class="sr-only peer" onChange={()=>{saveMode()}} />
-                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-                <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-700">Toggle me</span>
-            </label>
+        <div style={{ height: '100vh', paddingLeft: '50px', paddingTop: '150px' }} className={tailwnd}>
+            <div className="mr-auto ml-auto w-[30%]">
+                <div className="flex items-center justify-center border-slate-400 border-2 p-4 rounded-2xl hover:ease-in-out hover:scale-[1.01] hover:transition-all">
+                    <p className="mr-32">Change Theme </p>
+                    <input
+                        className="cursor-pointer relative w-10 h-5 transition-all duration-200 ease-in-out bg-gray-400 rounded-full shadow-inner outline-none appearance-none"
+                        type="checkbox"
+                        onChange={saveMode}
+                        checked={mode.darkmode}
+                    />
+                </div>
+            </div>
         </div>
     )
 }

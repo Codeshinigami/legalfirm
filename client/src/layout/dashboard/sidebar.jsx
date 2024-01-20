@@ -1,6 +1,7 @@
 import { legalfirmlogo } from "../../assets"
 import { useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
+
 const navLinks = [
     {title : "Menu"},
     {
@@ -48,10 +49,10 @@ export default function Sidebar() {
 
     let tailwnd=""
     if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
-        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 fixed flex flex-col top-0 left-0 w-64 bg-white h-full '
+        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 fixed flex flex-col top-0 left-0 w-64 bg-white h-full shadows'
     }
     else{
-        tailwnd = "fixed flex flex-col top-0 left-0 w-64 bg-white h-full"
+        tailwnd = "fixed flex flex-col top-0 left-0 w-64 bg-white h-full shadows"
     }
 
     const location = useLocation();
@@ -62,7 +63,7 @@ export default function Sidebar() {
     },[location]);
 
     return (
-        <div className=" min-h-screen flex flex-col z-[45] fixed flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800 "  style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)' }} >
+        <div className=" min-h-screen flex flex-col z-[45] fixed flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
             <div className={tailwnd}>
                 <div className="flex items-center ml-4 h-14">
                     <img className="w-8" src={legalfirmlogo} alt="logo" />

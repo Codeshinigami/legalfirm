@@ -23,7 +23,7 @@ export default function ChatBubble({ user, message, profilepic }) {
                 <img className="w-8 h-8 rounded-full" src={profilepic} alt={user} />
                 <div className={`flex flex-col w-auto max-w-[600px] leading-1.5 p-2 pl-5 pr-5 border-gray-200 bg-violet-600 rounded-xl rounded-tl-none ${user == "bot" && borders}`}>
                 <p className="text-sm font-normal py-2.5 ">
-                {message ? (
+                {brokeMsg ? (
                     <span dangerouslySetInnerHTML={{ __html: brokeMsg }} />
                 ) : (
                     <ChatLoader />
