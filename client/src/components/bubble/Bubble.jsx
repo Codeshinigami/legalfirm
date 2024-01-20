@@ -5,7 +5,7 @@ export default function Bubble() {
     const[chat,setchat] = useState(['How may i help you today','sfs','sfwe'])
   return (
     <>
-    <button onClick={()=>{setisactive(!isactive)}} className='fixed bottom-4 right-4 bg-blue-500  rounded-full h-20 w-20 text-white height-10'>
+    <button onClick={()=>{setisactive(!isactive)}} className='fixed bottom-6 right-6 bg-blue-500  rounded-full h-20 w-20 text-white height-10'>
       <img width='100px' src="/cutebot.png" alt="" className='rounded-full' />
     </button>
     {isactive?<div style={{height:'500px',width:'300px'}} className='fixed bottom-32 right-4 bg-blue-500 rounded text-white height-10 pt-2'>
