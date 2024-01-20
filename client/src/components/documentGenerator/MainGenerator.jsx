@@ -38,7 +38,7 @@ export default function MainGenerator() {
         {buttons.map((button, index) => (
           <div
             key={index}
-            className='relative m-2 inline-flex justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-2 border-black cursor-pointer group'
+            className='relative m-2 mx-5 inline-flex shadow-lg justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-t-2 border-l-2 border-r-4 border-b-4 border-black cursor-pointer group'
             style={{ backgroundImage: `url("${button.image}")` }}
             onClick={() => { setForm(button.name) }}
           >
