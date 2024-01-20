@@ -32,7 +32,7 @@ export default function MainGenerator() {
   ];
 
   return (
-    <div className='mt-4 justify-center'>
+    <div className={`pt-4 justify-center h-[100] ${localStorage.getItem('theme')=='0'?"dark:bg-slate-800 dark:text-white dark:text-slate-400":""}`}>
       <h2 className='text-center text-2xl font-bold text-violet-600 mt-20'>Select from the below options the document you want to generate!</h2>
       <div className='flex flex-wrap justify-center py-10 w-[100%] '>
         {buttons.map((button, index) => (

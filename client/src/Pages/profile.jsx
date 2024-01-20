@@ -91,7 +91,7 @@ export default function Profile() {
                     </div>
                 </div>
                 <div>
-                    <button onClick={() => { setFormDisplay(!formDisplay) }} className="dark:bg-slate-800 dark:text-white  p-2 rounde">Partner With us</button>
+                    <button onClick={() => { setFormDisplay(!formDisplay) }} className={` ${localStorage.getItem('theme')=='0'?"bg-white text-black ":"dark:bg-slate-800 dark:text-white dark:text-slate-400"}  p-2 rounde`}>Partner With us</button>
                     {formDisplay ?
                         <form>
                             <div class="grid gap-6 mb-6 md:grid-cols-2 mx-32">
