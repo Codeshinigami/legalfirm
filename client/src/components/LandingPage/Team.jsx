@@ -9,13 +9,12 @@ export default function Team(){
             </div>
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
               <span className="relative inline-block">
-                <span className="relative">Welcome</span>
+                <span className="relative text-violet-600">Meet</span>
               </span>{' '}
-              our talented team of professionals
+              our Top Legal Advisors of the firm.
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
+              they are considered as our pillars of our firm.
             </p>
           </div>
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -28,11 +27,11 @@ export default function Team(){
                 />
                 <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-1 text-lg font-bold text-gray-100">
-                    Oliver Aguilerra
+                    Varinder Dhillon
                   </p>
-                  <p className="mb-4 text-xs text-gray-100">Product Manager</p>
+                  <p className="mb-4 text-xs text-gray-100">Lawyer</p>
                   <p className="mb-4 text-xs tracking-wide text-gray-400">
-                    Vincent Van Gogh’s most popular painting, The Starry Night.
+                    Lukhnow High Court
                   </p>
                   <div className="flex items-center justify-center space-x-3">
                     <a
@@ -64,11 +63,11 @@ export default function Team(){
                 />
                 <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-1 text-lg font-bold text-gray-100">
-                    Marta Clermont
+                    Anshul Jain
                   </p>
-                  <p className="mb-4 text-xs text-gray-100">Design Team Lead</p>
+                  <p className="mb-4 text-xs text-gray-100">Judge</p>
                   <p className="mb-4 text-xs tracking-wide text-gray-400">
-                    Amet I love liquorice jujubes pudding croissant I love pudding.
+                    High Court, Delhi
                   </p>
                   <div className="flex items-center justify-center space-x-3">
                     <a
@@ -100,11 +99,11 @@ export default function Team(){
                 />
                 <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-1 text-lg font-bold text-gray-100">
-                    Anthony Geek
+                    Rehan Chalana
                   </p>
-                  <p className="mb-4 text-xs text-gray-100">CTO, Lorem Inc.</p>
+                  <p className="mb-4 text-xs text-gray-100">Lawyer</p>
                   <p className="mb-4 text-xs tracking-wide text-gray-400">
-                    Apple pie macaroon toffee jujubes pie tart cookie caramels.
+                    Mumbai High Court
                   </p>
                   <div className="flex items-center justify-center space-x-3">
                     <a
@@ -136,12 +135,11 @@ export default function Team(){
                 />
                 <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                   <p className="mb-1 text-lg font-bold text-gray-100">
-                    Alice Melbourne
+                    Udayan Sharma
                   </p>
-                  <p className="mb-4 text-xs text-gray-100">Human Resources</p>
+                  <p className="mb-4 text-xs text-gray-100">Lawyer</p>
                   <p className="mb-4 text-xs tracking-wide text-gray-400">
-                    Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing
-                    elit.
+                    Chandigarh High Court
                   </p>
                   <div className="flex items-center justify-center space-x-3">
                     <a
