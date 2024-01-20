@@ -5,9 +5,10 @@ The deliverables include a working prototype, a presentation outlining features 
 
 ## key features
 
-💻 legal sage : AI Powered Chatbot to answer your legal queries </br>
-📃 document generation: Generates Legal Documents and dequeues the Govt. offices as well as provides security to the parties. </br>
-⚖️ Affordable legal support : Bringing Lawyers to our platform to answer their queries
+💻 Legal Sage: AI Powered Chatbot to answer your legal queries </br>
+📃 Document Generation: Generates Legal Documents and dequeues the Govt. offices as well as provides security to the parties. </br>
+⚖️ Affordable legal support: Bringing Lawyers to our platform to answer their queries
+
 
 ## Getting Started 
 To run this application on your local machine, follow the steps below:
@@ -64,4 +65,4 @@ for example "http://localhost:5173"
 
 
                  
-````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
