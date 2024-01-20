@@ -3,6 +3,7 @@ import Bp from './Bp'
 import Ip from './Ip'
 import Ll from './Ll'
 import Cc from './Cc'
+import Nda from './Nda'
 
 export default function MainGenerator() {
     const [form,setform] = useState('')
@@ -11,6 +12,7 @@ export default function MainGenerator() {
         "Intlectual Property Agreement",
         "Land Lease",
         "Criminal Case",
+        "Non-Disclosure Act"
     ]
   return (
     <div className='mt-4'>
@@ -26,6 +28,7 @@ export default function MainGenerator() {
         {form==="Intlectual Property Agreement"?<Ip/>:""}
         {form==="Land Lease"?<Ll/>:""}
         {form==="Criminal Case"?<Cc/>:""}
+        {form==="Non-Disclosure Act"?<Nda/>:""}
       </div>
     </div>
   )

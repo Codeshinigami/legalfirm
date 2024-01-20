@@ -23,12 +23,12 @@ function App() {
         </Route>
 
         {/* routes for dashboard page will be rendered in defaultlayout  */}
-        {credentials.loggedIn ? <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
+        {<Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
           {Dashboardroutes.map((route, index) => {
             const { path, component: Component } = route;
             return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
           })}
-        </Route> : ""}
+        </Route> }
     </Routes>
   )
 }
