@@ -8,7 +8,7 @@ export const LoginContext = createContext();
 export default function LoginProvider({children}){
 
     const [loggedIn , setloggedIn] = useState(false);
-    const [darkmode , setDarkmode] = useState(0);
+    const [darkmode , setDarkmode] = useState(localStorage.getItem('theme')===undefined?0:1);
     const [profile , setProfile] = useState({}); 
 
     useEffect(() =>{
@@ -36,7 +36,7 @@ export default function LoginProvider({children}){
     }, [])
 
     return(
-        <LoginContext.Provider value={{loggedIn , profile , darkmode}}>
+        <LoginContext.Provider value={{loggedIn , profile , darkmode,setDarkmode}}>
             {children}
         </LoginContext.Provider>
     )
