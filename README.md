@@ -45,6 +45,14 @@ installing nodemon
 ```bash
 npm install nodemon
 ```
+create a .env file and the api keys for
+```
+1. ACCESS_URL="yourAccesUrlHere"
+2. PORT="yourPortNumberHere"
+3. OPENAI_API_KEY="yourOpenAiKeyHere"
+4. DB="yourMongoDBAtlasKeyHere"
+5. JWT_SECRET="someRandomTextHere"
+```
 
 ### 5. run the server using this command
 ```bash
@@ -59,6 +67,12 @@ on the terminal run the following commands
 ```bash
 npm install
 ```
+create a .env file and the api keys for
+```
+VITE_API_URL="yourLocalHostHere"
+```
+
+
 ### 8. run the client using this command
 ```bash
 npm run dev
