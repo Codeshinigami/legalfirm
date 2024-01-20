@@ -28,8 +28,21 @@ git clone https://github.com/Codeshinigami/legalfirm.git
 Your terminal path should look like this
 ``` c://yourcurrentdirectory/legalfirm/server```
 
-### 4. installing depend
-on the terminal run the fo
+### 4. installing dependencies
+on the terminal run the following commands 
+```bash
+npm install
+```
+installing nodemon
+```bash
+npm install nodemon
+```
+
+### 5. run the server using this command
+```bash
+nodemon index.js
+```
+
 
                  
 ````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
