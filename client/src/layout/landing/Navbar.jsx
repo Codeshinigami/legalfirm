@@ -52,7 +52,7 @@ const Navbar = () => {
             className={`text-white text-[18px] font-bold cursor-pointer flex transition ease-in-out delay-100 ${scrolled && "!text-black"
               }`}
           >
-            LegalFirm
+            EthicalEdge
           </p>
         </Link>
         <ul className="list-none hidden items-center sm:flex flex-row gap-10">

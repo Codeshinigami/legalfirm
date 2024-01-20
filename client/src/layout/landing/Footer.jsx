@@ -25,7 +25,7 @@ export default function Footer(){
             >
               <img src={legalfirmfooter} alt="logo" className="w-9 h-9"/>
               <span className="ml-2 text-xl font-bold tracking-wide text-[#43f9e0] underline">
-                LegalFirm
+                EthicalEdge
               </span>
             </a>
             <div className="mt-4 lg:max-w-sm">
