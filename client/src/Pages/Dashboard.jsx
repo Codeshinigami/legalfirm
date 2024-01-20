@@ -3,10 +3,18 @@ import newsdata from '../constants/newsdata'
 import Card from '../components/Card'
 // import Link
 
+let tailwnd=""
+    if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
+        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 px-20 pt-10 w-[100%]'
+    }
+    else{
+        tailwnd = "px-20 pt-10 w-[100%]"
+    }
+
 export default function Dashboard() {
     const [newscount, setnewscount] = useState(4)
     return (
-        <div className="px-20 pt-10 w-[100%]">
+        <div className={tailwnd}>
             <div className="w-full  overflow-hidden h-[200px] flex justify-center relative prevent-select rounded-xl">
                 <img className="w-[100%] object-cover" src="https://blog.ipleaders.in/wp-content/uploads/2021/08/law-firm-1-800x534.jpg" alt="" />
                 <h2 className="absolute top-[43%] text-white text-2xl font-semibold">Hey this is a banner</h2>

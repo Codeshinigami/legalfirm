@@ -1,9 +1,17 @@
 import React from 'react'
 
+// let tailwnd=""
+//     if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
+//         tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 flex w-[100%] justify-between items-center pl-10 pr-10 align-middle mt-16'
+//     }
+//     else{
+//         tailwnd = "flex w-[100%] justify-between items-center pl-10 pr-10 align-middle mt-16"
+//     }
+
 export default function Card(props) {
     return (
         <>
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
+            <div class="dark:bg-slate-800 dark:text-white dark:text-slate-400 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-100 dark:border-gray-700">
                 <img height={'200px'} class="rounded-t-lg" src={props.image} alt="" />
                 <div class="p-5">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{props.title}</h5>

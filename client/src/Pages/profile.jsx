@@ -1,7 +1,13 @@
-
+let tailwnd=""
+    if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
+        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg m-10'
+    }
+    else{
+        tailwnd = "bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg m-10"
+    }
 export default function Profile() {
     return (
-        <div class="bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg m-10">
+        <div class={tailwnd}>
             <div class="px-4 py-5 sm:px-6 flex items-center">
                 <img src="/photo.png" alt="wdw" width='80px'/>
                 <div className="ml-3">

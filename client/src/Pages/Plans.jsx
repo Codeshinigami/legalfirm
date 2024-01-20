@@ -25,8 +25,15 @@ const Pricing_categories = [
 ]
 
 export default function Plans() {
+    let tailwnd=""
+    if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
+        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 flex w-[100%] justify-between items-center pl-10 pr-10 align-middle'
+    }
+    else{
+        tailwnd = "flex w-[100%] justify-between items-center pl-10 pr-10 align-middle"
+    }
     return (
-        <div className="flex w-[100%] justify-between items-center pl-10 pr-10 align-middle mt-16">
+        <div className={tailwnd} style={{height:'100%'}}>
             {Pricing_categories.map((pricing, i) => {
                 const { name, desc, popular, price, facilities } = pricing;
                 return (
