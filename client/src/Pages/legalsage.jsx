@@ -150,8 +150,8 @@ export default function Legalsage() {
 
             <div className="h-[12%] grid items-center bg-transparent ">
                 <div className="relative flex justify-center items-center">
-                    <input type="text" ref={chatInput} onChange={(e) => { setMessage(e.target.value) }} placeholder="Ask LegalSage to get your Legal Queries Answered........" className="w-[70%] ml-auto mr-auto p-5 pr-14 h-[50px] leading-3 bg-gray-200 border-0 rounded-full focus:outline-none" />
-                    <button disabled={sendDisabled} className={`bg-black p-2 rounded-full absolute top-[7px] right-[13vw] ${sendDisabled && "opacity-70"}`} onClick={requestAi}>
+                    <input type="text" ref={chatInput} onChange={(e) => { setMessage(e.target.value) }} placeholder="Ask LegalSage to get your Legal Queries Answered........" onKeyDown={handleEnterKey} className="w-[70%] ml-auto mr-auto p-5 pr-14 h-[50px] leading-3 bg-gray-200 border-0 rounded-full focus:outline-none" />
+                    <button disabled={sendDisabled} className={`bg-black p-2 rounded-full absolute top-[7px] right-[13vw] ${sendDisabled && "opacity-70"}`} onClick={requestAi} >
                         <img src={send}  alt="send"/>
                     </button>
                 </div>
