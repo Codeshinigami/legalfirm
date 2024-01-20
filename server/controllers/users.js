@@ -51,7 +51,7 @@ const googleLogin = async (req,res) =>{
       res.cookie("jwt", jwt_token, { expires: expirationDate , httpOnly : false });
       res.json({success : "logged in."})
     }else{
-      const user = new userModel(userData);
+      const user = new userModel({email : email , name : name , picture : picture});
       await user.save();
       res.cookie("jwt", jwt_token, { expires: expirationDate , httpOnly : false });
       res.json({success : "logged in."})
@@ -92,6 +92,7 @@ const createUser = async (req, res) => {
           name: name,
           email: email,
           password: hashedpassword,
+          picture : null
         };
 
         //saving userdata in database
@@ -142,7 +143,8 @@ const loginUser = async (req, res) => {
         //generate jwt token
         const jwt_token = await generateJWT(
           userInDatabase.name,
-          userInDatabase.email
+          userInDatabase.email,
+          userInDatabase.picture
         );
 
         res.cookie("jwt", jwt_token, { expiresIn: "1d", httpOnly: false });

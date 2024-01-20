@@ -11,6 +11,9 @@ const userSchema = mongoose.Schema({
     password:{
         type: String
     },
+    picture:{
+        type : String
+    },
     chats : [
         {
             user : String,
