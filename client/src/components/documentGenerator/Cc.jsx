@@ -4,7 +4,6 @@ export default function Cc() {
   const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib
 
     async function modifyPdf() {
-        // getting inputs
         let caseType = document.querySelector("#caseType").value;
         let name1 = document.querySelector("#name1").value;
         let name2 = document.querySelector("#name2").value;
