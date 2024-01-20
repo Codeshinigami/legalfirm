@@ -82,7 +82,7 @@ export default function Bp() {
     download(pdfBytes, "BP.pdf", "application/pdf");
     }
     return (
-      <div className="w-full p-8 bg-white rounded-lg shadow-md flex flex-col items-center">
+      <div className={`${localStorage.getItem('theme')=='0'?"dark:bg-slate-800 dark:text-whit dark:text-slate-400":""} w-full p-8 bg-white rounded-lg shadow-md flex flex-col items-center`}>
         <h1 className="text-2xl font-bold mb-6">Agreement details</h1>
         <div className="form flex flex-col border-b-2 border-purple-500">
 
