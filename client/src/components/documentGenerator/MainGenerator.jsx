@@ -10,16 +10,17 @@ export default function MainGenerator() {
 
   const buttons = [
     {
-      name: "Business Partnership Agreement",
-      image: "/BP.png", // Replace with the actual image URL for Business Partnership Agreement
+      name: "Land Lease",
+      image: "/LL.png",
+       // Replace with the actual image URL for Business Partnership Agreement
     },
     {
       name: "Intellectual Property Agreement",
       image: "/IP.png", // Replace with the actual image URL for Intellectual Property Agreement
     },
     {
-      name: "Land Lease",
-      image: "/LL.png", // Replace with the actual image URL for Land Lease
+      name: "Business Partnership Agreement",
+      image: "/BP.png", // Replace with the actual image URL for Land Lease
     },
     {
       name: "Criminal Case",

@@ -126,7 +126,7 @@ export default function Ll() {
     <label class="block mb-2">Lease ends on</label>
     <input id="leaseEndDate" type="date" class="form-input mb-2 border-b-2 border-purple-500" />
     <input id="totalMonths" type="number" placeholder="Total Months" class="form-input mb-4 border-b-2 border-purple-500" />
-    <h4 class="text-lg font-bold mb-2">Rent details</h4>
+    <h4 class="text-lg font-bold mb-2 border-b-2 border-purple-500">Rent details</h4>
     <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2 border-b-2 border-purple-500" />
     <input id="landUse" type="text" placeholder="Land can be used for" class="form-input mb-2 border-b-2 border-purple-500" />
     <input id="proAct" type="text" placeholder="Prohibited Activities" class="form-input mb-2 border-b-2 border-purple-500" />
