@@ -128,7 +128,7 @@ export default function Legalsage() {
 
         // Chat View on LegalSage tab
 
-        <div className="h-[90vh] flex flex-col relative">
+        <div style={{height:'100vh'}} className={`border-l border-r border-gray-300 ${localStorage.getItem('theme')==0?"dark:bg-slate-800 dark:text-white dark:text-slate-400":""} h-[90vh] flex flex-col relative`}>
             <div className="h-[88%] pr-10 pl-10 pt-5 pb-2 w-[70%] mr-auto ml-auto overflow-x-hidden overflow-scroll no-scrollbar">
                 <div className="relative grid auto-rows-max-content gap-y-5 ">
                     {chats?.length > 0 ?
