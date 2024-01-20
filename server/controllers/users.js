@@ -5,8 +5,8 @@ const bcrypt = require("bcryptjs");
 const jwt_secret = process.env.JWT_SECRET;
 
 //function to generate jwt token
-const generateJWT = async (name, email) => {
-  const jwt_token = jwt.sign({ name: name, email: email }, jwt_secret, {
+const generateJWT = (name, email, picture=null) => {
+  const jwt_token = jwt.sign({ name: name, email: email , picture:picture }, jwt_secret, {
     expiresIn: "1d",
     algorithm: "HS256",
   });
@@ -21,8 +21,8 @@ const decodeJWT = async (req, res) => {
     const decoded = jwt.verify(jwt_token, jwt_secret, { algorithms: ["HS256"] }) || null;
     
     if (decoded) {
-      const { name, email } = decoded;
-      res.json({ name: name, email: email });
+      const { name, email, picture } = decoded;
+      res.json({ name: name, email: email , picture : picture});
     } else {
       res.json({ error: "Invalid JWT." });
     }
@@ -32,8 +32,38 @@ const decodeJWT = async (req, res) => {
   }
 };
 
+const googleLogin = async (req,res) =>{
+
+  try{
+    const {token} = req.body;
+    // var email = "";
+    var payload = JSON.parse(atob(token.split(".")[1]));
+    const {name , email , picture} = payload;
+
+    const userExists =  await userModel.findOne({email : email});
+
+    const expirationDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
+    const jwt_token = generateJWT(name , email , picture);
+
+    console.log(payload );
+    console.log(jwt_token);
+    if(userExists){
+      res.cookie("jwt", jwt_token, { expires: expirationDate , httpOnly : false });
+      res.json({success : "logged in."})
+    }else{
+      const user = new userModel(userData);
+      await user.save();
+      res.cookie("jwt", jwt_token, { expires: expirationDate , httpOnly : false });
+      res.json({success : "logged in."})
+    }
+
+  }catch(err){
+    console.log(err);
+    res.json({error : "Internal Server Error."})
+  }
+}
+
 //register route for creating new user
-// !need to handle some errors
 
 const createUser = async (req, res) => {
 
@@ -45,7 +75,12 @@ const createUser = async (req, res) => {
         return;
         }
 
-        
+        const userExists =  await userModel.findOne({email : email});
+
+        if(userExists){
+          res.json({error : "Email is already registered"})
+          return;
+        }
 
         const salt = await bcrypt.genSalt(11);
         const hashedpassword = await bcrypt.hash(password, salt).catch((err) => {
@@ -71,7 +106,7 @@ const createUser = async (req, res) => {
             const expirationDate = new Date(Date.now() + 24 * 60 * 60 * 1000);
 
             res.cookie("jwt", jwt_token, { expires: expirationDate , httpOnly : false });
-            res.status(201).json({ success: "user created successfully.", jwt_token: jwt_token });
+            res.status(201).json({ success: "user created successfully." });
             
         } catch (err) {
             res.json({ error: "Error occurred while creating a user." });
@@ -124,4 +159,4 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { createUser, loginUser , decodeJWT};
+module.exports = { createUser, loginUser , decodeJWT , googleLogin};

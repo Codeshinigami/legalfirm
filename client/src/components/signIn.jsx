@@ -1,6 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Axios from "axios";
 import toast from "react-hot-toast";
+import SimpleLoader from "./loaders/simpleloader";
 
 const api_url = import.meta.env.VITE_API_URL;
 
@@ -11,13 +12,35 @@ export default function SignIn({ setLogin }) {
   const [email , setEmail] = useState("");
   const [password , setPassword] = useState("");
 
+  const [loading , setLoading] = useState(false);
+
   const body = document.querySelector("body");
 
+  async function handleCredentialResponse(response) {
+    setLoading(true);
+    var encodedToken = encodeURIComponent(response.credential);
+    await Axios.post(api_url + "/googlelogin" , {
+      token : encodedToken
+    }, {withCredentials : true}).then((res) =>{
+      if(res.data.error){
+        console.log(res.data.error);
+        toast.error(res.data.error || "an error occured while logging in");
+      }else{
+        toast.success("logged in.");
+        location.reload();
+      }
+    })
+    setLoading(false)
+  }
+
   const handleLogin = async() =>{
-      
+
     if(!email || !password){
       toast.error("Fill out all the fields.")
+      return;
     }
+
+    setLoading(true);
 
     await Axios.post(api_url + "/login", {
       email : email,
@@ -26,17 +49,23 @@ export default function SignIn({ setLogin }) {
       console.log(res.data);
       if(res.data.success){
         toast.success("registered successfully.")
+        location.reload();
       }else{
         toast.error(res.data.error || "an error occured while logging in");
       }
     }).catch((err) => {console.log(err); toast.error("Internal Server error.")})
+
+    setLoading(false);
 
   }
 
   const handleSignup = async() =>{
      if(!name || !email || !password){
       toast.error("Fill out all the fields.")
+      return;
      }
+
+     setLoading(true);
 
      await Axios.post(api_url + "/register" , {
       name : name,
@@ -46,13 +75,26 @@ export default function SignIn({ setLogin }) {
       console.log(res.data);
       if(res.data.success){
         toast.success("logged in successfully.")
+        location.reload();
       }else{
         toast.error(res.data.error || "an error occured while registering");
       }
     }).catch((err) => {console.log(err); toast.error("Internal Server error.")})
 
+    setLoading(false);
+
   }
 
+  useEffect(() =>{
+    google.accounts.id.initialize({
+      client_id: "799527140319-c3qcq6ccadmfogl8sl04omoomr7d4gr7.apps.googleusercontent.com",
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.renderButton(
+      document.querySelector("#buttonDiv"),
+      { theme: "outline", size: "large" }
+    );
+  },[])
 
 
   return (
@@ -126,7 +168,8 @@ export default function SignIn({ setLogin }) {
                   />
                 </div>
                 <p className="font-semibold text-center">or</p>
-                <div className="bg-white mr-auto ml-auto border-2 border-solid  text-gray-100 hover:text-white shadow font-bold text-sm py-2 px-4 flex justify-center items-center cursor-pointer w-[60%] rounded-full">
+                <div id="buttonDiv"></div>
+                {/* <div className="bg-white mr-auto ml-auto border-2 border-solid  text-gray-100 hover:text-white shadow font-bold text-sm py-2 px-4 flex justify-center items-center cursor-pointer w-[60%] rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     x="0px"
@@ -151,8 +194,8 @@ export default function SignIn({ setLogin }) {
                       d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
                     ></path>
                   </svg>
-                  <p className="text-black">Sign up with Google</p>
-                </div>
+                  <p className="text-black" >Sign up with Google</p>
+                </div> */}
 
                 {!signup && (
                   <div className="flex items-center justify-between">
@@ -179,12 +222,13 @@ export default function SignIn({ setLogin }) {
                     </a>
                   </div>
                 )}
-                <button
+
+                {loading ? <div className="w-full bg-blue-600 rounded-lg px-5 py-[8px]"><SimpleLoader/></div> :<button
                   onClick={signup ? handleSignup : handleLogin}
                   className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
                 >
                   Sign {signup ? "up" : "in"}
-                </button>
+                </button>}
                 <p className="text-sm font-light text-center text-black">
                   {" "}
                   {signup
