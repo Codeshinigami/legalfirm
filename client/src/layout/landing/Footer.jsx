@@ -111,7 +111,7 @@ export default function Footer(){
                     href="/"
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                  Contact Us
+                  Advisors
                   </a>
                 </li>
                 
@@ -119,40 +119,31 @@ export default function Footer(){
             </div>
             <div>
               <p className="font-semibold tracking-wide text-[#43f9e0]">
-                AboutUs
+                Contact Us
               </p>
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a
-                    href="/"
+                  <p
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                    Services
-                  </a>
+                    Phone- +91 234 (353) 4532
+                  </p>
                 </li>
                 <li>
                   <a
                     href="/"
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                   Lawyers
+                   Email- support@ethicaledge.in
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/"
+                  <p
+              
                     className="transition-colors duration-300 text-white hover:text-teal-accent-400"
                   >
-                  Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
-                  >
-                  Contact Us
-                  </a>
+                  Address - Turing Block, Chitkara University
+                  </p>
                 </li>
               </ul>
             </div>
