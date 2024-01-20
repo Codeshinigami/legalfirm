@@ -63,7 +63,7 @@ export default function Sidebar() {
     },[location]);
 
     return (
-        <div className=" min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
+        <div className=" min-h-screen flex flex-col z-[45] fixed flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
             <div className={tailwnd}>
                 <div className="flex items-center ml-4 h-14 border-b">
                     <img className="w-8" src={legalfirmlogo} alt="logo" />
