@@ -3,10 +3,7 @@ const openai = require("../config/openai");
 // create a thread
 const createThread = async () => {
     try {
-        const threadResponse = await openai.beta.threads.create({\
-            messages: [{
-                "file-ids": []
-            }
+        const threadResponse = await openai.beta.threads.create({
         });
         return threadResponse.id;
     } catch (err) {

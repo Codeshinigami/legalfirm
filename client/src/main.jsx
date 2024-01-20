@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
+import LoginProvider from './context/loginProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -34,7 +35,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         }}
       />
         {/* Rendering app */}
-        <App />
+        <LoginProvider>
+            <App />
+        </LoginProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )

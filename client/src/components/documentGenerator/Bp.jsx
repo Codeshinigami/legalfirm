@@ -105,7 +105,12 @@ export default function Bp() {
       download(pdfBytes, "pdf-lib_modification_example.pdf", "application/pdf");
     }
   return (
+
 <div class="w-full p-8 bg-white rounded-lg shadow-md flex-row">
+<p class="mb-4">
+    Click the button to modify an existing PDF document with{" "}
+    <code class="bg-gray-200 p-1">pdf-lib</code>
+  </p>
 
   <h2 class="text-2xl font-bold mb-6">Agreement details</h2>
 
