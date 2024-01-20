@@ -22,7 +22,6 @@ export default function MainGenerator() {
       </div>
       {/* html forms will be appended here */}
       <div>
-        {form}
         {form==="Bisuness Parternship Agreement"?<Bp/>:""}
         {form==="Intlectual Property Agreement"?<Ip/>:""}
         {form==="Land Lease"?<Ll/>:""}
