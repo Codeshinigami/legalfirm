@@ -44,11 +44,12 @@ export default function Cc() {
 
         let policeStation = document.querySelector("#policeStation").value;
         let fir = document.querySelector("#fir").value;
-        let firYear = document.querySelector("#firyear").value;
+        let firYear = document.querySelector("#firYear").value;
         let dateOfOffence = document.querySelector("#dateOfOffence").value;
       // Fetch an existing PDF document
-      const url = 'CRFF.pdf';
-  	  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+      const existingPdfBytes = await fetch(
+        "https://raw.githubusercontent.com/RehanChalana/tech-hacks-work/main/CriminalCaseForm.pdf"
+      ).then((res) => res.arrayBuffer());
 
       // Load a PDFDocument from the existing PDF bytes
       const pdfDoc = await PDFDocument.load(existingPdfBytes)
@@ -111,10 +112,10 @@ export default function Cc() {
     firstPage.drawText(opaddress2,{x:164,y:557,size:12,font: helveticaFont,
         color: rgb(0, 0, 0),})
         if(gender=="male"){
-            firstPage.drawText("gender",{x:210,y:530,size:12,font: helveticaFont,
+            firstPage.drawText(gender,{x:210,y:530,size:12,font: helveticaFont,
                 color: rgb(0, 0, 0),})
         } else{
-            firstPage.drawText("gender",{x:308,y:530,size:12,font: helveticaFont,
+            firstPage.drawText(gender,{x:308,y:530,size:12,font: helveticaFont,
                 color: rgb(0, 0, 0),})
         }
     firstPage.drawText(opage,{x:405,y:530,size:12,font: helveticaFont,
