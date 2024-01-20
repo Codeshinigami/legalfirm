@@ -1,5 +1,10 @@
+import { LoginContext } from "../context/loginProvider"
+import { useContext } from "react"
 
 export default function Settings() {
+
+    const mode = useContext(LoginContext);
+
     const faltuKaFunc = () =>{
         if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==="0"){
             localStorage.setItem('theme',1)

@@ -24,5 +24,18 @@ const updateChat = async (req, res) => {
 
 };
 
+const getChats = async(req,res) =>{
+    try{
+        const {email} = req.body
 
-module.exports = updateChat;
+        const {chats} = await userModel.findOne({email : email});
+        res.json({chats : chats})
+
+    }catch(err){
+        console.log(err)
+        res.json({error : "Internal Server Error."});
+    }
+}
+
+
+module.exports = {updateChat , getChats};

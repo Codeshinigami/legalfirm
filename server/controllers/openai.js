@@ -95,7 +95,7 @@ const chatCompletion = async (req, res) => {
             ).join("\n");
 
         console.log("sent to client ... ")
-        res.status(200).json({ aiMsg });
+        res.status(200).json({ ai : aiMsg });
     } catch (error) {
         console.error(error);
         res.json({ error: "Internal server error" });
