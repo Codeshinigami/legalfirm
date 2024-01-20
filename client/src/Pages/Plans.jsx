@@ -37,14 +37,14 @@ export default function Plans() {
             {Pricing_categories.map((pricing, i) => {
                 const { name, desc, popular, price, facilities } = pricing;
                 return (
-                    <div key={i} className={"h-[500px] w-[32%] p-8 rounded-2xl border-[1px] border-gray-300 " + (popular ? "!border-blue-600 border-[2px] h-[530px] w-[35%]" : "")}>
+                    <div key={i} className={"h-[500px] w-[32%] p-8 rounded-2xl border-[1px] border-gray-300 " + (popular ? "!border-violet-600 border-[2px] h-[530px] w-[35%]" : "")}>
                         <div className="flex items-center justify-between">
                             <h2 className="font-semibold text-xl">{name}</h2>
-                            {popular && <p className="text-xs font-semibold bg-[#EDECFC] text-indigo-600 p-[7px] rounded-full">Most Popular</p>}
+                            {popular && <p className="text-xs font-semibold bg-[#EDECFC] text-violet-600 p-[7px] rounded-full">Most Popular</p>}
                         </div>
                         <p className="pt-1 pb-3 text-sm">{desc}</p>
                         <h3 className="pt-3 pb-3 text-4xl font-bold">₹{price} <span className="text-sm font-semibold text-gray-500">/month</span></h3>
-                        <button className={"w-[100%] mt-3 text-[15px] text-blue-600 font-medium rounded border-[1px] border-blue-100 border-solid p-1 mb-7"  + (popular ? " !text-white bg-blue-600" : "")}>Buy Plan</button>
+                        <button className={"w-[100%] mt-3 text-[15px] text-violet-600 font-medium rounded border-[1px] border-blue-100 border-solid p-1 mb-7"  + (popular ? " !text-white bg-violet-600" : "")}>Buy Plan</button>
                         <ul>
                             {facilities.map((facility, index) => {
                                 return (

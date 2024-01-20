@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 export default function Navbar(){
     let tailwnd=""
     if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
-        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 w-[100%] h-14 border-b-[1px] fixed left-0 z-[40]'
+        tailwnd = 'dark:bg-slate-800 dark:text-white dark:text-slate-400 w-[100%] h-14 border-b-[2px]'
     }
     else{
         tailwnd = "w-[100%] h-14 border-b-[1px]"
