@@ -167,52 +167,52 @@ export default function Cc() {
     </p>
     <div className="form grid grid-cols-2 gap-4">
     <h4 className="col-span-2 text-lg font-bold mb-2">Applicant details</h4>
-      <input id="caseType" placeholder="Case Type" className="form-input mb-4" />
-      <input id="name1" placeholder="first name" className="form-input mb-4" />
-      <input id="name2" placeholder="last name" className="form-input mb-4" />
-      <input id="fatherName1" placeholder="Father's first name" className="form-input mb-4" />
-      <input id="fatherName2" placeholder="Father's last name" className="form-input mb-4" />
-      <input id="address1" placeholder="Address line 1" className="form-input mb-4" />
-      <input id="address2" placeholder="Address line 2" className="form-input mb-4" />
-      <select id="gender" className="form-select mb-4">
+      <input id="caseType" placeholder="Case Type" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="name1" placeholder="first name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="name2" placeholder="last name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="fatherName1" placeholder="Father's first name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="fatherName2" placeholder="Father's last name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="address1" placeholder="Address line 1" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="address2" placeholder="Address line 2" className="form-input mb-4 border-b-2 border-purple-500" />
+      <select id="gender" className="form-select mb-4 border-b-2 border-purple-500">
         <option>Male</option>
         <option>Female</option>
       </select>
-      <input id="age" placeholder="Age" type="number" className="form-input mb-4" />
-      <input id="caste" placeholder="Caste" className="form-input mb-4" />
-      <input id="mail" placeholder="E-mail" className="form-input mb-4" />
-      <input id="phone" placeholder="Phone" className="form-input mb-4" />
-      <input id="mobile" placeholder="Mobile" className="form-input mb-4" />
-      <input id="adName" placeholder="Advocate Name" className="form-input mb-4" />
-      <input id="adID" placeholder="Advocate CIS CODE" className="form-input mb-4" />
-      <input id="adPhone" placeholder="Advocate Phone Number" className="form-input mb-4" />
+      <input id="age" placeholder="Age" type="number" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="caste" placeholder="Caste" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="mail" placeholder="E-mail" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="phone" placeholder="Phone" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="mobile" placeholder="Mobile" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="adName" placeholder="Advocate Name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="adID" placeholder="Advocate CIS CODE" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="adPhone" placeholder="Advocate Phone Number" className="form-input mb-4 border-b-2 border-purple-500" />
 
       <h4 className="col-span-2 text-lg font-bold mb-2">Opponent details</h4>
-      <input id="opcaseType" placeholder="Case Type" className="form-input mb-4" />
-      <input id="opname1" placeholder="first name" className="form-input mb-4" />
-      <input id="opname2" placeholder="last name" className="form-input mb-4" />
-      <input id="opfatherName1" placeholder="Father's first name" className="form-input mb-4" />
-      <input id="opfatherName2" placeholder="Father's last name" className="form-input mb-4" />
-      <input id="opaddress1" placeholder="Address line 1" className="form-input mb-4" />
-      <input id="opaddress2" placeholder="Address line 2" className="form-input mb-4" />
-      <select id="opgender" className="form-select mb-4">
+      <input id="opcaseType" placeholder="Case Type" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opname1" placeholder="first name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opname2" placeholder="last name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opfatherName1" placeholder="Father's first name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opfatherName2" placeholder="Father's last name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opaddress1" placeholder="Address line 1" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opaddress2" placeholder="Address line 2" className="form-input mb-4 border-b-2 border-purple-500" />
+      <select id="opgender" className="form-select mb-4 border-b-2 border-purple-500">
         <option>Male</option>
         <option>Female</option>
       </select>
-      <input id="opage" placeholder="Age" type="number" className="form-input mb-4" />
-      <input id="opcaste" placeholder="Caste" className="form-input mb-4" />
-      <input id="opmail" placeholder="E-mail" className="form-input mb-4" />
-      <input id="opphone" placeholder="Phone" className="form-input mb-4" />
-      <input id="opmobile" placeholder="Mobile" className="form-input mb-4" />
-      <input id="opadName" placeholder="Advocate Name" className="form-input mb-4" />
-      <input id="opadID" placeholder="Advocate CIS CODE" className="form-input mb-4" />
-      <input id="opadPhone" placeholder="Advocate Phone Number" className="form-input mb-4" />
+      <input id="opage" placeholder="Age" type="number" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opcaste" placeholder="Caste" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opmail" placeholder="E-mail" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opphone" placeholder="Phone" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opmobile" placeholder="Mobile" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opadName" placeholder="Advocate Name" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opadID" placeholder="Advocate CIS CODE" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="opadPhone" placeholder="Advocate Phone Number" className="form-input mb-4 border-b-2 border-purple-500" />
 
       <h4 className="col-span-2 text-lg font-bold mb-2">Police station details</h4>
-      <input id="policeStation" placeholder="Police Station" className="form-input mb-4" />
-      <input id="fir" placeholder="FIR Number" className="form-input mb-4" />
-      <input id="firYear" placeholder="FIR Year" className="form-input mb-4" />
-      <input id="dateOfOffence" type="date" className="form-input mb-4" />
+      <input id="policeStation" placeholder="Police Station" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="fir" placeholder="FIR Number" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="firYear" placeholder="FIR Year" className="form-input mb-4 border-b-2 border-purple-500" />
+      <input id="dateOfOffence" type="date" className="form-input mb-4 border-b-2 border-purple-500" />
     </div>
     <div>
   <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>

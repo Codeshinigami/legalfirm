@@ -87,22 +87,22 @@ export default function Ip() {
   <div class="form">
     <h2 class="text-2xl font-bold mb-4">Agreement details</h2>
     <label class="block mb-2">Effective Date</label>
-    <input id="effectiveDate" type="date" class="form-input mb-4" />
+    <input id="effectiveDate" type="date" class="form-input mb-4 border-b-2 border-purple-500" />
     <h4 class="text-lg font-bold mb-2">Employee details</h4>
-    <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2" />
-    <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-4" />
+    <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2 border-b-2 border-purple-500" />
+    <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-4 border-b-2 border-purple-500" />
     <h4 class="text-lg font-bold mb-2">Employer details</h4>
-    <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2" />
-    <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-4" />
+    <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2 border-b-2 border-purple-500" />
+    <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-4 border-b-2 border-purple-500" />
     <h4 class="text-lg font-bold mb-2">RECOGNITION OF PRE-EXISTING PROPERTY</h4>
-    <input id="property-1" type="text" placeholder="Property-1" class="form-input mb-2" />
-    <input id="property-2" type="text" placeholder="Property-2" class="form-input mb-4" />
+    <input id="property-1" type="text" placeholder="Property-1" class="form-input mb-2 border-b-2 border-purple-500" />
+    <input id="property-2" type="text" placeholder="Property-2" class="form-input mb-4 border-b-2 border-purple-500" />
     <h4 class="text-lg font-bold mb-2">TERM OF AGREEMENT</h4>
     <label class="block mb-2">This Agreement commences on</label>
-    <input id="commence-date" type="date" class="form-input mb-2" />
+    <input id="commence-date" type="date" class="form-input mb-2 border-b-2 border-purple-500" />
     <label class="block mb-2">This Agreement terminates on</label>
-    <input id="terminate-date" type="date" class="form-input mb-2" />
-    <input id="legal-framework" type="number" placeholder="Legal Framework" class="form-input mb-4" />
+    <input id="terminate-date" type="date" class="form-input mb-2 border-b-2 border-purple-500" />
+    <input id="legal-framework" type="number" placeholder="Legal Framework" class="form-input mb-4 border-b-2 border-purple-500" />
   </div>
   <div>
   <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
