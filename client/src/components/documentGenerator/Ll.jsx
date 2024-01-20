@@ -135,9 +135,9 @@ export default function Ll() {
     <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2" />
     <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-4" />
   </div>
-  <button onClick={() => modifyPdf()} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
-    Modify PDF
-  </button>
+  <div>
+  <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
+  </div>
   <p class="text-sm">(Your browser will download the resulting file)</p>
 </div>
 
