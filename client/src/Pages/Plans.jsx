@@ -33,7 +33,7 @@ export default function Plans() {
         tailwnd = "flex w-[100%] justify-between items-center pl-10 pr-10 align-middle"
     }
     return (
-        <div className={tailwnd} style={{height:'92.3vh'}}>
+        <div className={tailwnd} style={{height:'100vh'}}>
             {Pricing_categories.map((pricing, i) => {
                 const { name, desc, popular, price, facilities } = pricing;
                 return (
