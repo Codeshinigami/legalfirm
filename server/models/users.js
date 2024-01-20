@@ -19,6 +19,14 @@ const userSchema = mongoose.Schema({
             user : String,
             ai : String
         }
+    ],
+    Orders : [
+        {
+            method : String,
+            amount : Number,
+            orderid : String,
+            time : String
+        }
     ]
 })
 

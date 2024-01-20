@@ -168,7 +168,7 @@ export default function SignIn({ setLogin }) {
                   />
                 </div>
                 <p className="font-semibold text-center">or</p>
-                <div id="buttonDiv"></div>
+                <div className="flex justify-center"><div id="buttonDiv"></div></div>
                 {/* <div className="bg-white mr-auto ml-auto border-2 border-solid  text-gray-100 hover:text-white shadow font-bold text-sm py-2 px-4 flex justify-center items-center cursor-pointer w-[60%] rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

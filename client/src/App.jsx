@@ -6,6 +6,7 @@ import AppLoader from "./components/loaders/apploader";
 const LayoutLanding = lazy(() => import("./layout/landing/defaultlayout"))
 const LayoutDashboard = lazy(() => import("./layout/dashboard/defaultlayout"))
 import { LoginContext } from "./context/loginProvider";
+import PaymentSuccess from "./Pages/paymentsuccess";
 
 // All App's routes defined
 function App() {
@@ -23,12 +24,14 @@ function App() {
         </Route>
 
         {/* routes for dashboard page will be rendered in defaultlayout  */}
-        {<Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
+        {credentials.loggedIn && <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
           {Dashboardroutes.map((route, index) => {
             const { path, component: Component } = route;
             return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
           })}
         </Route> }
+
+        <Route element={<PaymentSuccess/>} path="/paymentsuccess"/>
     </Routes>
   )
 }
