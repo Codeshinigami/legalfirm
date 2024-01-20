@@ -1,4 +1,8 @@
-<img src="https://github.com/Codeshinigami/legalfirm/assets/139042983/31642eda-eda4-435e-8890-d81bc361c974" alt="EthicalEdge" width="700"/>
+<p align="center">
+  <img src="https://github.com/Codeshinigami/legalfirm/assets/139042983/b80bffb7-17f7-4fc0-8a21-fcedd5455624" alt="EthicalEdge" width="700"/>
+</p>
+
+
 
 ✨ The proposed AI-powered legal documentation assistant aims to revolutionize the process for individuals and small businesses in India.Users can access legal advice from experts when facing complex issues.This comprehensive solution not only simplifies legal documentation but also saves time, reduces errors, and improves access to justice for those with limited legal resources.
 The deliverables include a working prototype, a presentation outlining features and impact, and well-documented code for deployment and maintenance.✨
