@@ -100,53 +100,46 @@ export default function Ll() {
   return (
     <>
   <meta charSet="utf-8" />
-  <p>
+  <div class="p-4">
+  <p class="mb-4">
     Click the button to modify an existing PDF document with{" "}
-    <code>pdf-lib</code>
+    <code class="bg-gray-200 p-1">pdf-lib</code>
   </p>
-  <div className="form">
-    <h2>Agreement details</h2>
-    <label>Effective Date</label>
-    <input type="date" id="effective-date" />
-    <h4>Employee details</h4>
-    <input id="employeeName" type="text" placeholder="Employee Name" />
-    <input id="employeeAddress" type="text" placeholder="Employee Address" />
-    <h4>Employer details</h4>
-    <input id="employerName" type="text" placeholder="Employer Name" />
-    <input id="employerAddress" type="text" placeholder="Employer Address" />
-    <h4>Land description</h4>
-    <input id="landDiscription1" type="text" placeholder="land description 1" />
-    <input id="landDiscription2" type="text" placeholder="land description 2" />
-    <input id="landDiscription3" type="text" placeholder="land description 3" />
-    <h4>Term details</h4>
-    <label>Lease begins on</label>
-    <input id="leaseStartDate" type="date" />
-    <label>Lease ends on</label>
-    <input id="leaseEndDate" type="date" />
-    <input id="totalMonths" type="number" placeholder="totalMonths" />
-    <h4>Rent details</h4>
-    <input
-      id="monthlyAmount"
-      type="number"
-      placeholder="Monthly amount to pay"
-    />
-    <input id="landUse" type="text" placeholder="Land can be used for" />
-    <input id="proAct" type="text" placeholder="Prohibited Activities" />
-    <input
-      id="minInsurance"
-      type="number"
-      placeholder="Min Amount of insurance"
-    />
-    <input id="daysNotice" type="number" placeholder="days before notice" />
-    <input id="securityDeposit" type="number" placeholder="security deposit" />
-    <input
-      id="defaultAmount"
-      type="number"
-      placeholder="default amount per month"
-    />
+  <div class="form">
+    <h2 class="text-2xl font-bold mb-4">Agreement details</h2>
+    <label class="block mb-2">Effective Date</label>
+    <input type="date" id="effective-date" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Employee details</h4>
+    <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2" />
+    <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Employer details</h4>
+    <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2" />
+    <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Land description</h4>
+    <input id="landDiscription1" type="text" placeholder="land description 1" class="form-input mb-2" />
+    <input id="landDiscription2" type="text" placeholder="land description 2" class="form-input mb-2" />
+    <input id="landDiscription3" type="text" placeholder="land description 3" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Term details</h4>
+    <label class="block mb-2">Lease begins on</label>
+    <input id="leaseStartDate" type="date" class="form-input mb-2" />
+    <label class="block mb-2">Lease ends on</label>
+    <input id="leaseEndDate" type="date" class="form-input mb-2" />
+    <input id="totalMonths" type="number" placeholder="Total Months" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Rent details</h4>
+    <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2" />
+    <input id="landUse" type="text" placeholder="Land can be used for" class="form-input mb-2" />
+    <input id="proAct" type="text" placeholder="Prohibited Activities" class="form-input mb-2" />
+    <input id="minInsurance" type="number" placeholder="Min Amount of insurance" class="form-input mb-2" />
+    <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2" />
+    <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2" />
+    <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-4" />
   </div>
-  <button onclick="modifyPdf()">Modify PDF</button>
-  <p className="small">(Your browser will download the resulting file)</p>
+  <button onclick="modifyPdf()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
+    Modify PDF
+  </button>
+  <p class="text-sm">(Your browser will download the resulting file)</p>
+</div>
+
 </>
 
   )

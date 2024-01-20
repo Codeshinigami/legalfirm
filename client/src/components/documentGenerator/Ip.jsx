@@ -78,32 +78,37 @@ export default function Ip() {
   return (
     <>
   <meta charSet="utf-8" />
-  <p>
+  <div class="p-4">
+  <p class="mb-4">
     Click the button to modify an existing PDF document with{" "}
-    <code>pdf-lib</code>
+    <code class="bg-gray-200 p-1">pdf-lib</code>
   </p>
-  <div className="form">
-    <h2>Agreement details</h2>
-    <label>Effective date</label>
-    <input id="effectiveDate" type="date" />
-    <h4>Employee details</h4>
-    <input id="employeeName" type="text" placeholder="Employee Name" />
-    <input id="employeeAddress" type="text" placeholder="Employee Address" />
-    <h4>Employer details</h4>
-    <input id="employerName" type="text" placeholder="Employer Name" />
-    <input id="employerAddress" type="text" placeholder="Employer Address" />
-    <h4>RECOGNITION OF PRE-EXISTING PROPERTY</h4>
-    <input id="property-1" type="text" placeholder="Property-1" />
-    <input id="property-2" type="text" placeholder="property-2" />
-    <h4>TERM OF AGREEMENT</h4>
-    <label>This Agreement commences on</label>
-    <input id="comence-date" type="date" />
-    <label>This Agreement terminates on</label>
-    <input id="terminate-date" type="date" />
-    <input id="legal-framework" type="number" placeholder="legal-framework" />
+  <div class="form">
+    <h2 class="text-2xl font-bold mb-4">Agreement details</h2>
+    <label class="block mb-2">Effective Date</label>
+    <input id="effectiveDate" type="date" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Employee details</h4>
+    <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2" />
+    <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">Employer details</h4>
+    <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2" />
+    <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">RECOGNITION OF PRE-EXISTING PROPERTY</h4>
+    <input id="property-1" type="text" placeholder="Property-1" class="form-input mb-2" />
+    <input id="property-2" type="text" placeholder="Property-2" class="form-input mb-4" />
+    <h4 class="text-lg font-bold mb-2">TERM OF AGREEMENT</h4>
+    <label class="block mb-2">This Agreement commences on</label>
+    <input id="commence-date" type="date" class="form-input mb-2" />
+    <label class="block mb-2">This Agreement terminates on</label>
+    <input id="terminate-date" type="date" class="form-input mb-2" />
+    <input id="legal-framework" type="number" placeholder="Legal Framework" class="form-input mb-4" />
   </div>
-  <button onclick="modifyPdf()">Modify PDF</button>
-  <p className="small">(Your browser will download the resulting file)</p>
+  <button onclick="modifyPdf()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
+    Modify PDF
+  </button>
+  <p class="text-sm">(Your browser will download the resulting file)</p>
+</div>
+
 </>
 
   )
