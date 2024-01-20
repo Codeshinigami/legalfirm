@@ -15,7 +15,7 @@ export default function Footer(){
         />
       </svg>
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="grid lg:grid-cols-4">
+        <div className="grid lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
             <a
               href="/"
@@ -28,16 +28,16 @@ export default function Footer(){
                 EthicalEdge
               </span>
             </a>
-            <div className="mt-4 lg:max-w-sm">
+            <div className="mt-4 lg:max-w-sm mb-10">
               <p className="text-sm text-white">
-                Join us at EthicalEdge and be a part of the revolution!
+              Join us in leading a transformative legal revolution where principles, ethics, and innovation converge. As a part of our community, you'll be at the forefront of redefining legal excellence.
               </p>
               <p className="mt-4 text-sm text-white">
-                Lets Ease it out.
+              Together, let's shape a legal landscape where fairness, integrity, and cutting-edge solutions prevail. Join EthicalEdge – where the evolution of justice begins!
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 justify-items-end ml-60">
+          <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4 justify-items-end  mb-10">
             <div>
               <p className="font-semibold tracking-wide text-[#43f9e0]">
                 AboutUs
@@ -67,7 +67,93 @@ export default function Footer(){
                   Contact Us
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                  Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold tracking-wide text-[#43f9e0]">
+                Careers
+              </p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                    Lawyers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                   Data Scientist
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                  Developers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                  Contact Us
+                  </a>
+                </li>
                 
+              </ul>
+            </div>
+            <div>
+              <p className="font-semibold tracking-wide text-[#43f9e0]">
+                AboutUs
+              </p>
+              <ul className="mt-2 space-y-2">
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                   Lawyers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                  Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/"
+                    className="transition-colors duration-300 text-white hover:text-teal-accent-400"
+                  >
+                  Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

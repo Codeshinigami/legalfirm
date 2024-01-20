@@ -12,9 +12,7 @@ const About = () => {
         </p>
       </div>
       <p className="relative flex text-[#1e1e1e] text-[20px] text-center tracking-[0] leading-[31.4px] m-10 mt-7 pl-20 pr-20">
-        Since 2012, our Firm has served over 2,500+ clients with various law disputes. Our lawyers represent a wide
-        range of clients, but clients with complex legal issues and/or high conflict situations will benefit most from
-        our law firm.
+      Established in 2012, our law firm has proudly served over 2,500 clients, specializing in a diverse range of legal disputes. With a dedicated team of experienced lawyers, we excel in handling complex issues and high-conflict situations. Our client-centric approach prioritizes personalized strategies, clear communication, and proven success. Whether you're an individual, small business, or corporation, we are committed to being your trusted legal partner. Choose us for tailored solutions, a track record of excellence, and unwavering dedication to achieving the best outcomes for our clients.
       </p>
       <div className="flex items-center justify-center gap-[30px] relative flex-[0_0_auto] mt-10">
         <img className="relative w-[446.6px] h-[293px]" alt="Element" src={law1} />

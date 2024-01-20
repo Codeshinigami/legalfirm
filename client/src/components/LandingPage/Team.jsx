@@ -165,6 +165,11 @@ export default function Team(){
               </div>
             </div>
           </div>
+          <div className="flex justify-center mt-16">
+          <p className="flex text-center text-lg font-semibold whitespace-nowrap text-violet-600 justify-center items-center mt-9 px-10 py-3 max-md:px-5  italic">
+            "Become a Lawyer... Join Us!"
+          </p>
+          </div>
         </div>
       );
     }
