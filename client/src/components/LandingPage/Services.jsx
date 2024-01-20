@@ -1,4 +1,5 @@
 import { UserGroupIcon, BookOpenIcon, DocumentArrowDownIcon, NewspaperIcon, } from '@heroicons/react/24/outline'
+import {motion} from 'framer-motion'
 const features = [
   {
     name: 'LegalSage',
@@ -27,6 +28,10 @@ const features = [
 ]
 
 export default function Services() {
+  const variants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <div id="services" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -40,19 +45,36 @@ export default function Services() {
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
-                <dt className="text-base font-semibold leading-7 text-gray-900">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  {feature.name}
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
-              </div>
-            ))}
-          </dl>
+        <motion.dl
+  variants={variants}
+  initial="hidden"
+  animate="visible"
+  className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16"
+>
+  {features.map((feature, index) => (
+    <motion.div
+      key={feature.name}
+      variants={variants}
+      custom={index % 2 === 0 ? 1 : -1} // Customizing direction based on index
+      className="relative pl-16"
+      transition={{ delay: index * 0.2, duration: 0.5 }} // Adjust duration for slow reveal
+    >
+      <dt className="text-base font-semibold leading-7 text-gray-900">
+        <motion.div
+          className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+        </motion.div>
+        {feature.name}
+      </dt>
+      <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+    </motion.div>
+  ))}
+</motion.dl>
+
         </div>
       </div>
     </div>
