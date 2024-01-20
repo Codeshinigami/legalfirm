@@ -6,7 +6,7 @@ export default function Settings() {
     const mode = useContext(LoginContext);
 
     const [theme,settheme] = useState(localStorage.getItem('theme')===undefined?0:1)
-    const faltuKaFunc = () =>{
+    const saveMode = () =>{
         settheme(!theme)
         if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==="0"){
             localStorage.setItem('theme',1)
