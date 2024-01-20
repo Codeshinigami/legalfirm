@@ -109,31 +109,31 @@ export default function Ll() {
   <div class="form flex flex-col">
     <h2 class="text-2xl font-bold mb-4">Agreement details</h2>
     <label class="block mb-2">Effective Date</label>
-    <input type="date" id="effective-date" class="form-input mb-4 border-b-2 border-purple-500" />
+    <input type="date" id="effective-date" class="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <h4 class="text-lg font-bold mb-2">Employee details</h4>
-    <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-4 border-b-2 border-purple-500" />
+    <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <h4 class="text-lg font-bold mb-2">Employer details</h4>
-    <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-4 border-b-2 border-purple-500" />
+    <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <h4 class="text-lg font-bold mb-2">Land description</h4>
-    <input id="landDiscription1" type="text" placeholder="land description 1" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="landDiscription2" type="text" placeholder="land description 2" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="landDiscription3" type="text" placeholder="land description 3" class="form-input mb-4 border-b-2 border-purple-500" />
+    <input id="landDiscription1" type="text" placeholder="land description 1" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="landDiscription2" type="text" placeholder="land description 2" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="landDiscription3" type="text" placeholder="land description 3" class="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <h4 class="text-lg font-bold mb-2">Term details</h4>
     <label class="block mb-2">Lease begins on</label>
-    <input id="leaseStartDate" type="date" class="form-input mb-2 border-b-2 border-purple-500" />
+    <input id="leaseStartDate" type="date" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <label class="block mb-2">Lease ends on</label>
-    <input id="leaseEndDate" type="date" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="totalMonths" type="number" placeholder="Total Months" class="form-input mb-4 border-b-2 border-purple-500" />
+    <input id="leaseEndDate" type="date" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="totalMonths" type="number" placeholder="Total Months" class="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <h4 class="text-lg font-bold mb-2 border-b-2 border-purple-500">Rent details</h4>
-    <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="landUse" type="text" placeholder="Land can be used for" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="proAct" type="text" placeholder="Prohibited Activities" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="minInsurance" type="number" placeholder="Min Amount of insurance" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2 border-b-2 border-purple-500" />
-    <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-4 border-b-2 border-purple-500" />
+    <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="landUse" type="text" placeholder="Land can be used for" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="proAct" type="text" placeholder="Prohibited Activities" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="minInsurance" type="number" placeholder="Min Amount of insurance" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
   </div>
   <div>
   <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
