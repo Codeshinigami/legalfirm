@@ -7,7 +7,7 @@ export default function Settings() {
 
     const saveMode = () => {
         mode.setDarkmode(!mode.darkmode)
-        if (localStorage.getItem('theme') === undefined || localStorage.getItem('theme') === "0") {
+        if (localStorage.getItem('theme') == 0 && mode.darkmode) {
             localStorage.setItem('theme', 1)
         }
         else {
@@ -28,7 +28,7 @@ export default function Settings() {
                         className="cursor-pointer relative w-10 h-5 transition-all duration-200 ease-in-out bg-gray-400 rounded-full shadow-inner outline-none appearance-none"
                         type="checkbox"
                         onChange={saveMode}
-                        checked={mode.darkmode}
+                        checked={mode.darkmode ? true : false}
                     />
                 </div>
             </div>

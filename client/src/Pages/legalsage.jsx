@@ -72,7 +72,7 @@ export default function Legalsage() {
         //     setsendDisabled(false); 
         // }, 4000);
 
-        await Axios.post("http://localhost:5000/chatCompletion", {
+        await Axios.post(api_url + "/chatCompletion", {
             message
         }).then(res => {
             if (res.data.ai) {

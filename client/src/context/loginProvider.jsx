@@ -8,12 +8,18 @@ export const LoginContext = createContext();
 export default function LoginProvider({children}){
 
     const [loggedIn , setloggedIn] = useState(false);
-    const [darkmode , setDarkmode] = useState(localStorage.getItem('theme')===undefined?0:1);
+
+    const theme = localStorage?.getItem('theme');
+    const [darkmode , setDarkmode] = useState(0);
+
     const [profile , setProfile] = useState({}); 
 
     useEffect(() =>{
         const jwt_token = Cookies.get("jwt");
-
+        console.log(localStorage?.getItem('theme'));
+        if(theme){
+            setDarkmode(theme);
+        }
         //getting decoded data from server
         const getDecodedJWT = async() =>{
 

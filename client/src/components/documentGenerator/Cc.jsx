@@ -4,7 +4,6 @@ export default function Cc() {
   const { degrees, PDFDocument, rgb, StandardFonts } = PDFLib
 
     async function modifyPdf() {
-        // getting inputs
         let caseType = document.querySelector("#caseType").value;
         let name1 = document.querySelector("#name1").value;
         let name2 = document.querySelector("#name2").value;
@@ -169,12 +168,12 @@ export default function Cc() {
     <div className="form grid grid-cols-2 gap-4">
     <h4 className="col-span-2 text-lg font-bold mb-2">Applicant details</h4>
       <input id="caseType" placeholder="Case Type" className="form-input mb-4" />
-      <input id="name1" placeholder="Name" className="form-input mb-4" />
-      <input id="name2" placeholder="Name" className="form-input mb-4" />
-      <input id="fatherName1" placeholder="Father Name 1" className="form-input mb-4" />
-      <input id="fatherName2" placeholder="Father Name 2" className="form-input mb-4" />
-      <input id="address1" placeholder="Address 1" className="form-input mb-4" />
-      <input id="address2" placeholder="Address 2" className="form-input mb-4" />
+      <input id="name1" placeholder="first name" className="form-input mb-4" />
+      <input id="name2" placeholder="last name" className="form-input mb-4" />
+      <input id="fatherName1" placeholder="Father's first name" className="form-input mb-4" />
+      <input id="fatherName2" placeholder="Father's last name" className="form-input mb-4" />
+      <input id="address1" placeholder="Address line 1" className="form-input mb-4" />
+      <input id="address2" placeholder="Address line 2" className="form-input mb-4" />
       <select id="gender" className="form-select mb-4">
         <option>Male</option>
         <option>Female</option>
@@ -190,12 +189,12 @@ export default function Cc() {
 
       <h4 className="col-span-2 text-lg font-bold mb-2">Opponent details</h4>
       <input id="opcaseType" placeholder="Case Type" className="form-input mb-4" />
-      <input id="opname1" placeholder="Name" className="form-input mb-4" />
-      <input id="opname2" placeholder="Name" className="form-input mb-4" />
-      <input id="opfatherName1" placeholder="Father Name 1" className="form-input mb-4" />
-      <input id="opfatherName2" placeholder="Father Name 2" className="form-input mb-4" />
-      <input id="opaddress1" placeholder="Address 1" className="form-input mb-4" />
-      <input id="opaddress2" placeholder="Address 2" className="form-input mb-4" />
+      <input id="opname1" placeholder="first name" className="form-input mb-4" />
+      <input id="opname2" placeholder="last name" className="form-input mb-4" />
+      <input id="opfatherName1" placeholder="Father's first name" className="form-input mb-4" />
+      <input id="opfatherName2" placeholder="Father's last name" className="form-input mb-4" />
+      <input id="opaddress1" placeholder="Address line 1" className="form-input mb-4" />
+      <input id="opaddress2" placeholder="Address line 2" className="form-input mb-4" />
       <select id="opgender" className="form-select mb-4">
         <option>Male</option>
         <option>Female</option>

@@ -33,12 +33,12 @@ export default function MainGenerator() {
 
   return (
     <div className='mt-4 justify-center'>
-      <h2 className='text-center text-3xl mt-20'>Select from the below options the documents you want to generate!</h2>
-      <div className='flex flex-wrap py-10 px-20'>
+      <h2 className='text-center text-2xl font-bold text-violet-600 mt-20'>Select from the below options the document you want to generate!</h2>
+      <div className='flex flex-wrap justify-center py-10 w-[100%] '>
         {buttons.map((button, index) => (
           <div
             key={index}
-            className='relative m-2 inline-flex justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-2 border-black cursor-pointer group'
+            className='relative m-2 mx-5 inline-flex shadow-lg justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-t-2 border-l-2 border-r-4 border-b-4 border-black cursor-pointer group'
             style={{ backgroundImage: `url("${button.image}")` }}
             onClick={() => { setForm(button.name) }}
           >
@@ -51,7 +51,7 @@ export default function MainGenerator() {
       </div>
       <hr className="my-4 w-full border-t-2 border-gray-500" />
       {/* html forms will be appended here */}
-      <div>
+      < div className='flex justify-center'>
         {form === "Business Partnership Agreement" ? <Bp /> : ""}
         {form === "Intellectual Property Agreement" ? <Ip /> : ""}
         {form === "Land Lease" ? <Ll /> : ""}
