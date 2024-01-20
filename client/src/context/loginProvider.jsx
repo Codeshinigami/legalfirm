@@ -7,14 +7,15 @@ export const LoginContext = createContext();
 
 export default function LoginProvider({children}){
 
-    const jwt_token = Cookies.get("jwt");
     const [loggedIn , setloggedIn] = useState(false);
     const [profile , setProfile] = useState({}); 
 
     useEffect(() =>{
+        const jwt_token = Cookies.get("jwt");
 
         //getting decoded data from server
         const getDecodedJWT = async() =>{
+
             await Axios.post(api_url + "/decodeJWT" , {
                 jwt_token : jwt_token
             }).then((res) =>{
@@ -31,7 +32,7 @@ export default function LoginProvider({children}){
             getDecodedJWT();
         }
 
-    }, [jwt_token])
+    }, [])
 
     return(
         <LoginContext.Provider value={{loggedIn , profile}}>
