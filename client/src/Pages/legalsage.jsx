@@ -1,10 +1,10 @@
 import ChatBubble from "../components/Dashboard/chatbubble"
-import { bot } from "../assets"
 import { send } from "../assets"
 import ChatLoader from "../components/loaders/chatLoader"
 import React, { useEffect, useRef, useState } from "react"
 import { LoginContext } from "../context/loginProvider"
 import { useContext } from "react"
+import { legalfirm } from "../assets"
 import Axios from "axios";
 
 const api_url = import.meta.env.VITE_API_URL;
@@ -136,7 +136,7 @@ export default function Legalsage() {
                             return (
                             <div key={msg._id || i} className="grid auto-rows-max-content gap-y-20">
                                 <ChatBubble user={"user"} message={msg.user} profilepic={credentials.profile.picture}></ChatBubble>
-                                <ChatBubble user={"bot"} message={msg.ai} profilepic={bot}></ChatBubble>
+                                <ChatBubble user={"bot"} message={msg.ai} profilepic={legalfirm}></ChatBubble>
                             </div>
                             )
                         })
@@ -144,9 +144,6 @@ export default function Legalsage() {
                 </div>
                 <div ref={chatsRef} id="bottom"></div>
             </div>
-            {sendDisabled && <div className="absolute grid items-center w-[90%] left-10 bottom-20">
-                <ChatLoader />
-            </div>}
 
             <div className="h-[12%] grid items-center bg-transparent ">
                 <div className="relative flex justify-center items-center">

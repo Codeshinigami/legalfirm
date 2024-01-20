@@ -5,7 +5,7 @@ export default function ChatBubble({ user, message, profilepic }) {
     let tailwnd=""
     let txtclr = ''
     if(localStorage.getItem('theme')===undefined || localStorage.getItem('theme')==0){
-        txtclr = 'rounded-tr-none bg-gray-100 text-black'
+        txtclr = 'rounded-tr-none !bg-black-100 text-white'
     }
     else{
         txtclr = 'rounded-tr-none !bg-slate-700 text-white'
