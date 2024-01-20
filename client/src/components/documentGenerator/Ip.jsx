@@ -12,13 +12,14 @@ export default function Ip() {
       let employerAddress = document.querySelector("#employerAddress").value;
       let property_1 = document.querySelector("#property-1").value;
       let property_2 = document.querySelector("#property-2").value;
-      let commence_date = document.querySelector("#comence-date").value;
+      let commence_date = document.querySelector("#commence-date").value;
       let terminate_date = document.querySelector("#terminate-date").value;
       let legal_framework = document.querySelector("#legal-framework").value;
       
       // Fetch an existing PDF document
-      const url = 'IP.pdf';
-  	  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+  	  const existingPdfBytes = await fetch(
+        "https://raw.githubusercontent.com/RehanChalana/tech-hacks-work/main/IP.pdf"
+      ).then((res) => res.arrayBuffer());
 
       // Load a PDFDocument from the existing PDF bytes
       const pdfDoc = await PDFDocument.load(existingPdfBytes)
@@ -103,7 +104,7 @@ export default function Ip() {
     <input id="terminate-date" type="date" class="form-input mb-2" />
     <input id="legal-framework" type="number" placeholder="Legal Framework" class="form-input mb-4" />
   </div>
-  <button onclick="modifyPdf()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
+  <button onClick={()=>{modifyPdf()}} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
     Modify PDF
   </button>
   <p class="text-sm">(Your browser will download the resulting file)</p>
