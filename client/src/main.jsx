@@ -7,7 +7,6 @@ import { Toaster } from 'react-hot-toast'
 import LoginProvider from './context/loginProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <BrowserRouter>
       <Toaster
         position="top-center"
@@ -39,5 +38,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <App />
         </LoginProvider>
     </BrowserRouter>
-  </React.StrictMode>,
 )

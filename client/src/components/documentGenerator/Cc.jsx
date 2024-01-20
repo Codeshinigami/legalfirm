@@ -164,10 +164,10 @@ export default function Cc() {
   <meta charSet="utf-8" />
   <div className="p-4">
     <p className="mb-4">
-      Click the button to modify an existing PDF document with{" "}
-      <code className="bg-gray-200 p-1">pdf-lib</code>
+      Please provide the required details to generate the document.
     </p>
     <div className="form grid grid-cols-2 gap-4">
+    <h4 className="col-span-2 text-lg font-bold mb-2">Applicant details</h4>
       <input id="caseType" placeholder="Case Type" className="form-input mb-4" />
       <input id="name1" placeholder="Name" className="form-input mb-4" />
       <input id="name2" placeholder="Name" className="form-input mb-4" />

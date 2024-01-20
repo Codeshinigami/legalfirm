@@ -1,5 +1,10 @@
+import { LoginContext } from "../context/loginProvider"
+import { useContext } from "react"
 import React, { useState } from 'react'
 export default function Settings() {
+
+    const mode = useContext(LoginContext);
+
     const [theme,settheme] = useState(localStorage.getItem('theme')===undefined?0:1)
     const faltuKaFunc = () =>{
         settheme(!theme)

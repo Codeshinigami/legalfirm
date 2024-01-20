@@ -21,7 +21,7 @@ app.use(cors({
 app.use(express.urlencoded({extended : true}));
 app.use(express.json());
 
-app.use("/aiApi",openaiRouter);
+app.use(openaiRouter);
 app.use(usersRouter);
 app.use(chatsRouter);
 
