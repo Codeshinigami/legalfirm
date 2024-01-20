@@ -99,16 +99,16 @@ export default function Nda() {
       Click the button to modify an existing PDF document with{" "}
       <code className="bg-gray-200 p-1">pdf-lib</code>
     </p>
-    <input id="date" type="date" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="companyA" placeholder="Company A" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="companyAOffice" placeholder="Company A Office" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="companyAreferredAs" placeholder="Referred as" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="companyB" placeholder="Company B" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="companyBOffice" placeholder="Company B Office" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="companyBreferredAs" placeholder="Referred as" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="purpose" placeholder="Purpose of Relation" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="terminationYears" placeholder="Years for Termination" className="form-input mb-4 border-b-2 border-purple-500" />
-    <input id="expiryYears" placeholder="Years for Expiry" className="form-input mb-4 border-b-2 border-purple-500" />
+    <input id="date" type="date" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="companyA" placeholder="Company A" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="companyAOffice" placeholder="Company A Office" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="companyAreferredAs" placeholder="Referred as" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="companyB" placeholder="Company B" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="companyBOffice" placeholder="Company B Office" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="companyBreferredAs" placeholder="Referred as" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="purpose" placeholder="Purpose of Relation" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="terminationYears" placeholder="Years for Termination" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
+    <input id="expiryYears" placeholder="Years for Expiry" className="form-input mb-4 border-b-2 border-purple-500 px-3 py-1 rounded-md" />
     <div>
   <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
   </div>
