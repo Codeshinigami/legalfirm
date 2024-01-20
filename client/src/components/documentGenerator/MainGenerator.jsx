@@ -38,11 +38,14 @@ export default function MainGenerator() {
         {buttons.map((button, index) => (
           <div
             key={index}
-            className='m-2 inline-flex justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-2 border-black cursor-pointer'
+            className='relative m-2 inline-flex justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-2 border-black cursor-pointer group'
             style={{ backgroundImage: `url("${button.image}")` }}
             onClick={() => { setForm(button.name) }}
           >
-            {button.name}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition duration-300"></div>
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+              {button.name}
+            </div>
           </div>
         ))}
       </div>
