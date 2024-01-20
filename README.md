@@ -7,6 +7,10 @@
 ✨ The proposed AI-powered legal documentation assistant aims to revolutionize the process for individuals and small businesses in India.Users can access legal advice from experts when facing complex issues.This comprehensive solution not only simplifies legal documentation but also saves time, reduces errors, and improves access to justice for those with limited legal resources.
 The deliverables include a working prototype, a presentation outlining features and impact, and well-documented code for deployment and maintenance.✨
 
+
+![image](https://github.com/Codeshinigami/legalfirm/assets/139042983/869c5aff-d702-4902-add5-4629ffbc9563)
+
+
 ## key features
 
 💻 Legal Sage: AI Powered Chatbot to answer your legal queries </br>
