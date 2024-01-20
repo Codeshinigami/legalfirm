@@ -1,12 +1,11 @@
 import { createContext, useEffect, useState } from "react"
 import Cookies from "js-cookie"
-import {Outlet} from 'react-router-dom';
 import Axios from "axios";
 
 const api_url = import.meta.env.VITE_API_URL;
 export const LoginContext = createContext();
 
-export default function LoginProvider(){
+export default function LoginProvider({children}){
 
     const jwt_token = Cookies.get("jwt");
     const [loggedIn , setloggedIn] = useState(false);
@@ -23,18 +22,20 @@ export default function LoginProvider(){
                     Cookies.remove("jwt");
                 }else{
                     setloggedIn(true);
-                    setProfile({name : res.data.name , email : res.data.email})
+                    setProfile({name : res.data.name , email : res.data.email , picture : res.data.picture})
                 }
             })
         }
 
-        getDecodedJWT();
+        if(jwt_token){
+            getDecodedJWT();
+        }
 
     }, [jwt_token])
 
     return(
         <LoginContext.Provider value={{loggedIn , profile}}>
-            <Outlet/>
+            {children}
         </LoginContext.Provider>
     )
 }

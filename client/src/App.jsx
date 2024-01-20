@@ -1,19 +1,19 @@
 import { Route, Routes } from "react-router-dom"
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useContext } from "react";
 import landingroutes from "./routes/landing";
 import Dashboardroutes from "./routes/dashboard";
 import AppLoader from "./components/loaders/apploader";
-import LoginProvider from "./context/loginProvider";
-
 const LayoutLanding = lazy(() => import("./layout/landing/defaultlayout"))
 const LayoutDashboard = lazy(() => import("./layout/dashboard/defaultlayout"))
+import { LoginContext } from "./context/loginProvider";
 
 // All App's routes defined
 function App() {
 
+  const credentials = useContext(LoginContext);
+
   return (
     <Routes>
-      <Route element={<LoginProvider/>}>
         {/* routes for landing page will be rendered in defaultlayout of landing page */}
         <Route element={<Suspense fallback={<AppLoader />}><LayoutLanding /></Suspense>}>
           {landingroutes.map((route, index) => {
@@ -23,13 +23,12 @@ function App() {
         </Route>
 
         {/* routes for dashboard page will be rendered in defaultlayout  */}
-        <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
+        {credentials.loggedIn ? <Route element={<Suspense fallback={<AppLoader />}><LayoutDashboard /></Suspense>}>
           {Dashboardroutes.map((route, index) => {
             const { path, component: Component } = route;
             return <Route key={index} path={path} element={<Suspense fallback={<AppLoader />}><Component /></Suspense>} />
           })}
-        </Route>
-      </Route>
+        </Route> : ""}
     </Routes>
   )
 }
