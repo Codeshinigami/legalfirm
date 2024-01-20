@@ -1,5 +1,4 @@
 import { About, Hero, Team, Services } from '../components/LandingPage'
-import Bubble from '../components/bubble/Bubble'
 
 export default function Landing() {
 
@@ -12,7 +11,6 @@ export default function Landing() {
       <About />
       <Services />
       <Team />
-      <Bubble/>
     </div>
   )
 }

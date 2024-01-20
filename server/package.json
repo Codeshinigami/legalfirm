@@ -8,6 +8,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.0",
-    "openai": "^4.24.7"
+    "openai": "^4.24.7",
+    "razorpay": "^2.9.2"
   }
 }

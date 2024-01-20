@@ -80,7 +80,7 @@ const Navbar = () => {
           :
             <li className="text-[18px] font-medium cursor-pointer">
               <button
-                className={`list-none text-white text-center text-[18px] shadow-lg border-white border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-violet-600 border-violet-600"
+                className={`list-none text-white text-center text-[18px] shadow-lg border-violet-600 border bg-transparent self-center justify-center px-8 py-1 rounded-[40px] max-md:px-5 transition ease-in-out delay-100 ${scrolled && "!text-violet-600 border-violet-600"
                   }`}
                 onClick={() => {
                   setLogin(!login);

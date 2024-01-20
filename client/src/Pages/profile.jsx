@@ -73,7 +73,7 @@ export default function Profile() {
                                     About
                                 </dt>
                                 <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                                    To get social media testimonials like these, keep your customers engaged with your social media accounts by posting regularly yourself
+To get social media testimonials like these, keep your customers engaged with your social media accounts by posting regularly yourself
                                 </dd>
                             </div>
 
@@ -91,7 +91,6 @@ export default function Profile() {
                     </div>
                 </div>
                 <div>
-                    
                     <button onClick={() => { setFormDisplay(!formDisplay) }} className={` ${localStorage.getItem('theme')=='0'?"bg-white text-black ":"dark:bg-slate-800 dark:text-white dark:text-slate-400"}  p-2 rounde`}>Partner With us</button>
                     {formDisplay ?
                         <form className="dark:bg-slate-900  dark:text-whit dark:text-slate-400 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 rounded-lg shadow-md">
@@ -104,8 +103,7 @@ export default function Profile() {
                                     <label for="last_name" class="block mb-2 text-sm font-medium  ">Last name</label>
                                     <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Doe" required />
                                 </div>
-
-                                <div>
+<div>
                                     <label for="website" class="block mb-2 text-sm font-medium  ">Location</label>
                                     <input type="text" id="website" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="flowbite.com" required />
                                 </div>

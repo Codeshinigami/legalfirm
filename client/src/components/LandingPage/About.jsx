@@ -1,5 +1,6 @@
 import React from 'react';
 import { law1, law2, law3 } from '../../assets';
+import {motion} from 'framer-motion';
 const About = () => {
   return (
     <div id="about" className="bg-white py-24 sm:py-32">
@@ -15,9 +16,30 @@ const About = () => {
       Established in 2012, our law firm has proudly served over 2,500 clients, specializing in a diverse range of legal disputes. With a dedicated team of experienced lawyers, we excel in handling complex issues and high-conflict situations. Our client-centric approach prioritizes personalized strategies, clear communication, and proven success. Whether you're an individual, small business, or corporation, we are committed to being your trusted legal partner. Choose us for tailored solutions, a track record of excellence, and unwavering dedication to achieving the best outcomes for our clients.
       </p>
       <div className="flex items-center justify-center gap-[30px] relative flex-[0_0_auto] mt-10">
-        <img className="relative w-[446.6px] h-[293px]" alt="Element" src={law1} />
-        <img className="relative w-[446.6px] h-[293px]" alt="Element" src={law2} />
-        <img className="relative w-[446.6px] h-[293px]" alt="Element" src={law3} />
+        <motion.img
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 , delay: 1.5}}
+          className="relative w-[446.6px] h-[293px] shadow-lg shadow-black"
+          alt="Element"
+          src={law1}
+        />
+        <motion.img
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          className="relative w-[446.6px] h-[293px] shadow-lg shadow-black"
+          alt="Element"
+          src={law2}
+        />
+        <motion.img
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.5 }}
+          className="relative w-[446.6px] h-[293px] shadow-lg shadow-black"
+          alt="Element"
+          src={law3}
+        />
       </div>
     </div>
   );
