@@ -35,7 +35,7 @@ const Hero = () => {
             lawyers in this Country!
           </p>
           <button className="text-white text-center text-lg font-semibold whitespace-nowrap shadow-lg bg-violet-600 self-center justify-center items-stretch mt-9 px-10 py-3 rounded-[150px] max-md:px-5">
-            Get your Quote!
+            Get Started.
           </button>
         </div>
       </div>
