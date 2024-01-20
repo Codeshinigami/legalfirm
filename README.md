@@ -81,6 +81,12 @@ npm run dev
 ### 9. run the application on your local host
 for example "http://localhost:5173"
 
+## Future Scope
+
+⚖️🧑‍⚖️👩‍⚖️
+
+In the future, this app will let you hire lawyers at affordable rates, transcending geographical boundaries to connect users with legal experts worldwide. With an intuitive mobile interface, it ensures legal assistance is at your fingertips, complemented by AI-powered insights for personalized advice and efficient document handling.
+
 
                  
 
