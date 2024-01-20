@@ -119,8 +119,8 @@ export default function Legalsage() {
 
         // Chat View on LegalSage tab
 
-        <div className="h-[90vh] flex flex-col relative">
-            <div className="h-[88%] pr-10 pl-10 pt-5 pb-2 w-[70%] mr-auto ml-auto overflow-x-hidden overflow-scroll no-scrollbar">
+        <div style={{height:"92.5%"}} className="h-[90vh] flex flex-col  dark:bg-slate-800 dark:text-white dark:text-slate-400">
+            <div className="border-l border-r border-gray-700 h-[88%] pr-10 pl-10 pt-5 pb-2 w-[70%] mr-auto ml-auto overflow-x-hidden overflow-scroll no-scrollbar">
                 <div className="relative grid auto-rows-max-content gap-y-5 ">
                     {chats?.length > 0 ?
                         chats.map((msg, i) => {
@@ -139,9 +139,9 @@ export default function Legalsage() {
                 <ChatLoader />
             </div>}
 
-            <div className="h-[12%] grid items-center bg-transparent backdrop-blur-lg">
+            <div className="h-[12%] grid items-center bg-transparent ">
                 <div className="relative flex justify-center items-center">
-                    <input type="text" ref={chatInput} onChange={(e) => { setMessage(e.target.value) }} placeholder="Ask LegalSage to get your Legal Queries Answered........" className="w-[70%] ml-auto mr-auto p-5 pr-14 h-[50px] leading-3 bg-gray-200 border-0 rounded-full focus:outline-none" />
+                    <input type="text" ref={chatInput} onChange={(e) => { setMessage(e.target.value) }} placeholder="Ask LegalSage to get your Legal Queries Answered........" className="w-[70%]  p-5 pr-14 h-[50px] leading-3 bg-gray-200 border-0 rounded-full focus:outline-none" />
                     <button disabled={sendDisabled} className={`bg-black p-2 rounded-full absolute top-[7px] right-[13vw] ${sendDisabled && "opacity-70"}`} onClick={requestAi}>
                         <img src={send}  alt="send"/>
                     </button>
