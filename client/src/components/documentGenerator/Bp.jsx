@@ -83,25 +83,25 @@ export default function Bp() {
     }
     return (
       <div className="w-full p-8 bg-white rounded-lg shadow-md flex flex-col items-center">
-        <h2 className="text-2xl font-bold mb-6">Agreement details</h2>
-        <div className="form">
-          <h2>Agreement details</h2>
+        <h1 className="text-2xl font-bold mb-6">Agreement details</h1>
+        <div className="form flex flex-col border-b-2 border-purple-500">
+
           <label>Effective date</label>
-          <input id="effectiveDate" type="date" />
-          <h4>Partners details</h4>
-          <input id="partner1Name" type="text" placeholder="Partner-1 Name" />
-          <input id="partner1Address" type="text" placeholder="Partner-1 Address" />
-          <h4>Employer details</h4>
-          <input id="partner2Name" type="text" placeholder="Partner-2 Name" />
-          <input id="partner2Address" type="text" placeholder="Partner-2 Address" />
-          <h4>PURPOSE OF PARTNERSHIP</h4>
-          <input id="purpose-1" type="text" placeholder="Purpose-1" />
-          <input id="purpose-2" type="text" placeholder="purpose-2" />
-          <input id="purpose-3" type="text" placeholder="purpose-3" />
-          <input id="purpose-4" type="text" placeholder="purpose-4" />
-          <input id="purpose-5" type="text" placeholder="purpose-5" />
-          <h4>BUSINESS LOCATION</h4>
-          <input id="businessLocation" type="text" placeholder="business location" />
+          <input id="effectiveDate" type="date" class="form-input mb-2 border-b-2 border-purple-500"/>
+          <h4 class="text-lg font-bold mb-2">Partners details</h4>
+          <input id="partner1Name" type="text" placeholder="Partner-1 Name" class="form-input mb-2 border-b-2 border-purple-500" />
+          <input id="partner1Address" type="text" placeholder="Partner-1 Address" class="form-input mb-2 border-b-2 border-purple-500" />
+          <h4 class="text-lg font-bold mb-2">Employer details</h4>
+          <input id="partner2Name" type="text" placeholder="Partner-2 Name" class="form-input mb-2 border-b-2 border-purple-500" />
+          <input id="partner2Address" type="text" placeholder="Partner-2 Address" class="form-input mb-2 border-b-2 border-purple-500" />
+          <h4 class="text-lg font-bold mb-2">PURPOSE OF PARTNERSHIP</h4>
+          <input id="purpose-1" type="text" placeholder="Purpose-1" class="form-input mb-2 border-b-2 border-purple-500" />
+          <input id="purpose-2" type="text" placeholder="purpose-2" class="form-input mb-2 border-b-2 border-purple-500" />
+          <input id="purpose-3" type="text" placeholder="purpose-3" class="form-input mb-2 border-b-2 border-purple-500" />
+          <input id="purpose-4" type="text" placeholder="purpose-4" class="form-input mb-2 border-b-2 border-purple-500" />
+          <input id="purpose-5" type="text" placeholder="purpose-5" class="form-input mb-2 border-b-2 border-purple-500" />
+          <h4 class="text-lg font-bold mb-2">BUSINESS LOCATION</h4>
+          <input id="businessLocation" type="text" placeholder="business location"  />
         </div>
         <div>
           <button className="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>
