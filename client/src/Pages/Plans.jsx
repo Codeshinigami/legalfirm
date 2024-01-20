@@ -3,24 +3,24 @@ import { check } from "../assets";
 const Pricing_categories = [
     {
         name: "Free",
-        desc: "The essentials to provide your best work for clients.",
+        desc: "The plan you're currently enrolled in.",
         popular: false,
         price: "0",
-        facilities: ["5 products", "Up to 1,000 subscribers", "Basic analytics", "48-hour support response time"]
+        facilities: ["LegalSage AI", "Up to 800 tokens per month",]
     },
     {
-        name: "Premium",
-        desc: "A plan that scales with your rapidly growing business.",
+        name: "Pro",
+        desc: "A plan that will ease your legal processes",
         popular: true,
-        price: "9.99",
-        facilities: ["5 products", "Up to 1,000 subscribers", "Basic analytics", "48-hour support response time"]
+        price: "350",
+        facilities: ["LegalSage AI", "Up to 2,000 tokens per month", "Document Generation",'24/7 Legal Assistance']
     },
     {
-        name: "Business",
-        desc: "Dedicated support and infrastructure for your company.",
+        name: "Enterprise",
+        desc: "Dedicated Plan specially for businesses",
         popular: false,
-        price: "29.99",
-        facilities: ["5 products", "Up to 1,000 subscribers", "Basic analytics", "48-hour support response time"]
+        price: "900",
+        facilities: ["LegalSage AI", "Unlimited tokens", "Special documents generation with encryption", "24/7 Legal Assistance"]
     }
 ]
 
@@ -43,7 +43,7 @@ export default function Plans() {
                             {popular && <p className="text-xs font-semibold bg-[#EDECFC] text-indigo-600 p-[7px] rounded-full">Most Popular</p>}
                         </div>
                         <p className="pt-1 pb-3 text-sm">{desc}</p>
-                        <h3 className="pt-3 pb-3 text-4xl font-bold">${price} <span className="text-sm font-semibold text-gray-500">/month</span></h3>
+                        <h3 className="pt-3 pb-3 text-4xl font-bold">₹{price} <span className="text-sm font-semibold text-gray-500">/month</span></h3>
                         <button className={"w-[100%] mt-3 text-[15px] text-blue-600 font-medium rounded border-[1px] border-blue-100 border-solid p-1 mb-7"  + (popular ? " !text-white bg-blue-600" : "")}>Buy Plan</button>
                         <ul>
                             {facilities.map((facility, index) => {

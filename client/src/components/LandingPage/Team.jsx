@@ -16,7 +16,7 @@ export default function Team(){
               our Top Legal Advisors of the firm.
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              they are considered as our pillars of our firm.
+              We have more than 100+ lawyers working with us from all over the country who are experts in their respective fields.
             </p>
           </div>
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

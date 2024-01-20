@@ -24,8 +24,9 @@ export default function Ll() {
     let defaultAmount = document.querySelector("#defaultAmount").value;
     
       // Fetch an existing PDF document
-      const url = 'LandLease.pdf'
-  	  const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer())
+      const existingPdfBytes = await fetch(
+        "https://raw.githubusercontent.com/RehanChalana/tech-hacks-work/main/LandLease.pdf"
+      ).then((res) => res.arrayBuffer());
 
       // Load a PDFDocument from the existing PDF bytes
       const pdfDoc = await PDFDocument.load(existingPdfBytes)
@@ -41,7 +42,7 @@ export default function Ll() {
       const { width, height } = firstPage.getSize()
 
       // Draw a string of text diagonally across the first page
-    firstPage.drawText(effective_date,{x:80,y:672,size:10,font: helveticaFont,
+    firstPage.drawText(effective_date,{x:80,y:694,size:10,font: helveticaFont,
     color: rgb(0, 0, 0),})
     firstPage.drawText(employeeName,{x:195,y:665,size:12,font: helveticaFont,
       color: rgb(0, 0, 0),})
@@ -134,7 +135,7 @@ export default function Ll() {
     <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2" />
     <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-4" />
   </div>
-  <button onclick="modifyPdf()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
+  <button onClick={() => modifyPdf()} class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">
     Modify PDF
   </button>
   <p class="text-sm">(Your browser will download the resulting file)</p>
