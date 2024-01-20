@@ -107,14 +107,14 @@ export default function Bp() {
   return (
 
 <div class="w-full p-8 bg-white rounded-lg shadow-md flex-row">
-<p class="mb-4">
+{/* <p class="mb-4">
     Click the button to modify an existing PDF document with{" "}
     <code class="bg-gray-200 p-1">pdf-lib</code>
-  </p>
+  </p> */}
 
   <h2 class="text-2xl font-bold mb-6">Agreement details</h2>
 
-  <label class="block text-gray-700">Effective Date</label>
+  <h4 class="block text-gray-700">Effective Date</h4>
   <input type="date" id="effective-date" class="form-input mb-4 focus:ring focus:ring-blue-300"/>
 
   <h4 class="text-lg font-bold mb-2">Employee details</h4>
@@ -145,7 +145,10 @@ export default function Bp() {
   <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-  <button onClick={() => modifyPdf()}>Modify PDF</button>
+  <div>
+  <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
+  </div>
+
     <p class="small">(Your browser will download the resulting file)</p>
 </div>
   )

@@ -33,19 +33,23 @@ export default function MainGenerator() {
 
   return (
     <div className='mt-4 justify-center'>
-      <h2 className='text-center text-3xl'>Select from the below options the documents you want to generate!</h2>
-      <div className='flex flex-wrap'>
+      <h2 className='text-center text-3xl mt-20'>Select from the below options the documents you want to generate!</h2>
+      <div className='flex flex-wrap py-10 px-20'>
         {buttons.map((button, index) => (
           <div
             key={index}
-            className='m-2 inline-flex justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-2 border-black hover:bg-black-100'
+            className='relative m-2 inline-flex justify-center text-white py-28 px-40 w-40 h-91 bg-cover rounded-md transition duration-300 ease-in-out opacity-80 border-2 border-black cursor-pointer group'
             style={{ backgroundImage: `url("${button.image}")` }}
             onClick={() => { setForm(button.name) }}
           >
-            {button.name}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition duration-300"></div>
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+              {button.name}
+            </div>
           </div>
         ))}
       </div>
+      <hr className="my-4 w-full border-t-2 border-gray-500" />
       {/* html forms will be appended here */}
       <div>
         {form === "Business Partnership Agreement" ? <Bp /> : ""}

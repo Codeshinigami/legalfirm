@@ -215,12 +215,10 @@ export default function Cc() {
       <input id="firYear" placeholder="FIR Year" className="form-input mb-4" />
       <input id="dateOfOffence" type="date" className="form-input mb-4" />
     </div>
-    <button
-      onClick={() => modifyPdf()}
-      className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300"
-    >
-      Modify PDF
-    </button>
+    <div>
+  <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
+  </div>
+
     <p className="text-sm">(Your browser will download the resulting file)</p>
   </div>
 </>
