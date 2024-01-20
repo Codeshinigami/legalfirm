@@ -106,50 +106,64 @@ export default function Bp() {
     }
   return (
 
-<div class="w-full p-8 bg-white rounded-lg shadow-md flex-row">
-{/* <p class="mb-4">
-    Click the button to modify an existing PDF document with{" "}
-    <code class="bg-gray-200 p-1">pdf-lib</code>
-  </p> */}
+<div class="w-full p-8 bg-white rounded-lg shadow-md flex flex-col items-center">
 
-  <h2 class="text-2xl font-bold mb-6">Agreement details</h2>
+<h2 class="text-2xl font-bold mb-6">Agreement details</h2>
 
-  <h4 class="block text-gray-700">Effective Date</h4>
-  <input type="date" id="effective-date" class="form-input mb-4 focus:ring focus:ring-blue-300"/>
+<div class="mb-4">
+  <label class="block text-gray-700">Effective Date</label>
+  <input type="date" id="effective-date" class="form-input focus:ring focus:ring-blue-300"/>
+</div>
 
+<div class="mb-6">
   <h4 class="text-lg font-bold mb-2">Employee details</h4>
   <input id="employeeName" type="text" placeholder="Employee Name" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
+  <input id="employeeAddress" type="text" placeholder="Employee Address" class="form-input focus:ring focus:ring-blue-300"/>
+</div>
 
+<div class="mb-6">
   <h4 class="text-lg font-bold mb-2">Employer details</h4>
   <input id="employerName" type="text" placeholder="Employer Name" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
+  <input id="employerAddress" type="text" placeholder="Employer Address" class="form-input focus:ring focus:ring-blue-300"/>
+</div>
 
+<div class="mb-6">
   <h4 class="text-lg font-bold mb-2">Land description</h4>
   <input id="landDiscription1" type="text" placeholder="Land description 1" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="landDiscription2" type="text" placeholder="Land description 2" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="landDiscription3" type="text" placeholder="Land description 3" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
+  <br />
+  <input id="landDiscription3" type="text" placeholder="Land description 3" class="form-input focus:ring focus:ring-blue-300"/>
+</div>
 
+<div class="">
   <h4 class="text-lg font-bold mb-2">Term details</h4>
   <label class="block text-gray-700">Lease begins on</label>
   <input id="leaseStartDate" type="date" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <label class="block text-gray-700">Lease ends on</label>
   <input id="leaseEndDate" type="date" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="totalMonths" type="number" placeholder="Total Months" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
+  <input id="totalMonths" type="number" placeholder="Total Months" class="form-input focus:ring focus:ring-blue-300"/>
+</div>
 
+<div class="mb-6">
   <h4 class="text-lg font-bold mb-2">Rent details</h4>
-  <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
+  <input id="monthlyAmount" type="number" placeholder="Monthly amount to pay" class="form-input mb-2 focus:ring focus:ring-blue-300 border-b-2 border-pruple-500"/>
   <input id="landUse" type="text" placeholder="Land can be used for" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
+  <br />
   <input id="proAct" type="text" placeholder="Prohibited Activities" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="minInsurance" type="number" placeholder="Min Amount of insurance" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
+  <br />
   <input id="daysNotice" type="number" placeholder="Days before notice" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
   <input id="securityDeposit" type="number" placeholder="Security deposit" class="form-input mb-2 focus:ring focus:ring-blue-300"/>
-  <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input mb-6 focus:ring focus:ring-blue-300"/>
-  <div>
-  <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
-  </div>
-
-    <p class="small">(Your browser will download the resulting file)</p>
+  <br />
+  <input id="defaultAmount" type="number" placeholder="Default amount per month" class="form-input focus:ring focus:ring-blue-300"/>
 </div>
+
+<div>
+  <button class="border-2 border-black bg-blue-400 rounded-md px-2 py-1" onClick={() => modifyPdf()}>Download PDF</button>
+</div>
+
+<p class="small">(Your browser will download the resulting file)</p>
+</div>
+
   )
 }
