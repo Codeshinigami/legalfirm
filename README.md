@@ -25,9 +25,7 @@ Clone your forked repository to your local machine using the following command:
 git clone https://github.com/Codeshinigami/legalfirm.git
 ```
 
-### 3. running the server
-
-Your terminal path should look like this
+### 3. change the directory to
 ``` yourcurrentdirectory/legalfirm/server```
 
 ### 4. installing server dependencies
@@ -46,9 +44,7 @@ nodemon index.js
 ```
 
 ### 6. change the directory to 
-```
-yourcurrentdirectory/legalfirm/client
-```
+```yourcurrentdirectory/legalfirm/client```
 
 ### 7. installing client dependencies
 on the terminal run the following commands 
